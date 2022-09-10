@@ -8,9 +8,9 @@ import java.util.StringTokenizer
 import java.util.ArrayDeque
 
 
-val dirs = arrayOf(1 to 0, 0 to -1, -1 to 0, 0 to 1)
+private val dirs = arrayOf(1 to 0, 0 to -1, -1 to 0, 0 to 1)
 
-fun bfs(n:Int, m:Int, graph: Array<Array<Int>>, sx:Int, sy:Int) : Int{
+private fun bfs(n:Int, m:Int, graph: Array<Array<Int>>, sx:Int, sy:Int) : Int{
     val deque = ArrayDeque<Pair<Int, Int>>().apply{
         add(sx to sy)
     }
@@ -34,7 +34,7 @@ fun bfs(n:Int, m:Int, graph: Array<Array<Int>>, sx:Int, sy:Int) : Int{
     return size
 }
 
-fun solution(n:Int, m:Int, graph:Array<Array<Int>>) : Array<Int>{
+private fun solution(n:Int, m:Int, graph:Array<Array<Int>>) : Array<Int>{
     var count = 0
     var maxSize = 0
 
