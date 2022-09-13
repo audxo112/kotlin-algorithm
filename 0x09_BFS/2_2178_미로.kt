@@ -1,9 +1,7 @@
 //https://www.acmicpc.net/problem/2178
 
 
-import java.io.BufferedReader
 import java.io.BufferedWriter
-import java.io.InputStreamReader
 import java.io.OutputStreamWriter
 import java.util.ArrayDeque
 
@@ -44,10 +42,9 @@ private fun solution(n:Int, m:Int, graph:Array<Array<Int>>) : Int{
     return -1
 }
 
-fun main(){
-    val br = BufferedReader(InputStreamReader(System.`in`))
+private fun main() = with(System.`in`.bufferedReader()){
     val bw = BufferedWriter(OutputStreamWriter(System.out))
-    val (n, m) = br.readLine().split(" ").map{
+    val (n, m) = readLine().split(" ").map{
         it.toInt()
     }
 
@@ -56,13 +53,12 @@ fun main(){
             Array(m + 2){ 0 }
         }
         else {
-            val line = br.readLine()
+            val line = readLine()
             Array(m + 2){ mi ->
                 if(mi == 0 || mi == m + 1) 0 else line[mi - 1].digitToInt()
             }
         }
     }
-    br.close()
 
     val answer = solution(n, m, graph)
     bw.write("$answer\n")

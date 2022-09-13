@@ -1,8 +1,6 @@
 //https://www.acmicpc.net/problem/1926
 
-import java.io.BufferedReader
 import java.io.BufferedWriter
-import java.io.InputStreamReader
 import java.io.OutputStreamWriter
 import java.util.StringTokenizer
 import java.util.ArrayDeque
@@ -52,21 +50,19 @@ private fun solution(n:Int, m:Int, graph:Array<Array<Int>>) : Array<Int>{
     )
 }
 
-fun main(){
-    val br = BufferedReader(InputStreamReader(System.`in`))
+private fun main() = with(System.`in`.bufferedReader()){
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val (n, m) = br.readLine().split(" ").map{
+    val (n, m) = readLine().split(" ").map{
         it.toInt()
     }
 
     val graph = Array(n){
-        val tokenizer = StringTokenizer(br.readLine())
+        val tokenizer = StringTokenizer(readLine())
         Array(m){
             tokenizer.nextToken()?.toInt() ?: 0
         }
     }
-    br.close()
 
     solution(n, m, graph).forEach {
         bw.write("$it\n")
