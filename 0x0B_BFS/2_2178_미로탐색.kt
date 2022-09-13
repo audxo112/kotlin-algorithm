@@ -7,14 +7,14 @@ private val dy = listOf(1,-1,0,0)
 private lateinit var graph : Array<IntArray>
 private lateinit var visited : Array<BooleanArray>
 
-fun main(){
-    val input = readln().split(" ").map { it.toInt() }
+fun main(args: Array<String>) = with(System.`in`.bufferedReader()){
+    val input = readLine().split(" ").map { it.toInt() }
     n = input[0]
     m = input[1]
     graph = Array(n) {IntArray(m) {0} }
     visited = Array(n) {BooleanArray(m) {false} }
     for (i in 0 until n){
-        val line = readln().chunked(1).map { it.toInt() }
+        val line = readLine().chunked(1).map { it.toInt() }
         line.forEachIndexed{index,it ->
             graph[i][index] = if (it == 1) 1 else 0
         }
