@@ -23,7 +23,7 @@ fun main(args: Array<String>) = with(System.`in`.bufferedReader()){
     println(graph[n-1][m-1])
 }
 
-fun bfs(x:Int,y:Int){
+private fun bfs(x:Int,y:Int){
     val q = LinkedList<Pair<Int,Int>>()
     q.offer(Pair(x,y))
     visited[x][y] = true

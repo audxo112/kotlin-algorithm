@@ -40,7 +40,7 @@ fun main(){
 
 }
 
-fun bfs(x:Int,y:Int){
+private fun bfs(x:Int,y:Int){
 
     val q = LinkedList<Pair<Int,Int>>()
     q.offer(Pair(x,y))
