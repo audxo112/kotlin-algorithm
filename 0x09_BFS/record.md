@@ -6,3 +6,5 @@
 
 ### 7576 토마토
 ![image](https://user-images.githubusercontent.com/9216335/189825551-32399106-0883-4a97-9a95-4c3e6b789de5.png)
+
+- 메모리 사용량이 백준의 다른사람들과 차이가 나는 이유를 모르겠음
