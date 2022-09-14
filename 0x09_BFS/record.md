@@ -8,3 +8,6 @@
 ![image](https://user-images.githubusercontent.com/9216335/189825551-32399106-0883-4a97-9a95-4c3e6b789de5.png)
 
 - 메모리 사용량이 백준의 다른사람들과 차이가 나는 이유를 모르겠음
+
+### 4179 불!
+![image](https://user-images.githubusercontent.com/9216335/190032200-33279b7d-c61a-4c22-a49d-5ff5eaf0458a.png)
