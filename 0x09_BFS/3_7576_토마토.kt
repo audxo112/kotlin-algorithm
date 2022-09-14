@@ -1,4 +1,5 @@
 //https://www.acmicpc.net/problem/7576
+package solution7576
 
 import java.util.StringTokenizer
 

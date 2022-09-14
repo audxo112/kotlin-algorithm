@@ -1,5 +1,5 @@
 //https://www.acmicpc.net/problem/2178
-
+package solution2178
 
 import java.io.BufferedWriter
 import java.io.OutputStreamWriter
