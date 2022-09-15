@@ -14,3 +14,6 @@
 
 ### 1697 숨바꼭질
 ![image](https://user-images.githubusercontent.com/9216335/190296323-16691765-59a1-4bdd-b525-0737347e6651.png)
+
+### 1012 유기농 배추
+![image](https://user-images.githubusercontent.com/9216335/190527118-3c2b801e-fb60-4744-aba4-74ad4aeb55a6.png)
