@@ -3,6 +3,7 @@ package solution1697
 
 import java.util.LinkedList
 import java.util.Queue
+import java.util.StringTokenizer
 
 
 private fun solution(n:Int, k:Int) : Int{
@@ -10,7 +11,7 @@ private fun solution(n:Int, k:Int) : Int{
         return n - k
     }
     val K = Math.min(k * 2 + 1, 100001)
-    val visited = BooleanArray(K){ false }
+    val visited = BooleanArray(K)
     visited[n] = true
 
     val deque:Queue<Int> = LinkedList()
@@ -49,9 +50,9 @@ private fun solution(n:Int, k:Int) : Int{
 
 
 private fun main() = with(System.`in`.bufferedReader()){
-    val (n, k) = readLine().split(" ").map {
-        it.toInt()
-    }
+    val tokenizer = StringTokenizer(readLine(), " ")
+    val n = tokenizer.nextToken().toInt()
+    val k = tokenizer.nextToken().toInt()
 
     println(solution(n, k))
 }

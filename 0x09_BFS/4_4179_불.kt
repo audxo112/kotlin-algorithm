@@ -1,15 +1,19 @@
 //https://www.acmicpc.net/problem/4179
 package solution4179
 
-private data class Point(val x:Int, val y:Int)
 
-private val dirs = arrayOf(
-    1 to 0, 0 to -1, -1 to 0, 0 to 1
-)
+import java.util.StringTokenizer
+
+private class Point(val x:Int, val y:Int)
+
+
+private val dx = intArrayOf(0, 1, 0, -1)
+private val dy = intArrayOf(1, 0, -1, 0)
+
 
 private fun solution(r:Int, c:Int, graph:Array<CharArray>, person:ArrayDeque<Point>, fire:ArrayDeque<Point>) : String{
-    val (sx, sy) = person.first()
-    if(sx == 0 || sx == c - 1 || sy == 0 || sy == r - 1){
+    val sPos = person.first()
+    if(sPos.x == 0 || sPos.x == c - 1 || sPos.y == 0 || sPos.y == r - 1){
         return "1"
     }
 
@@ -18,19 +22,19 @@ private fun solution(r:Int, c:Int, graph:Array<CharArray>, person:ArrayDeque<Poi
             graph[y][x] == '#' || graph[y][x] == 'F'
         }
     }
-    visited[sy][sx] = true
+    visited[sPos.y][sPos.x] = true
 
     var time = 1
     while(person.isNotEmpty()){
         time += 1
         repeat(fire.size){
-            val (x, y) = fire.removeFirst()
+            val fPos = fire.removeFirst()
 
-            for ((dx, dy) in dirs){
-                val nx = x + dx
-                val ny = y + dy
+            for (dir in 0 .. 3){
+                val nx = fPos.x + dx[dir]
+                val ny = fPos.y + dy[dir]
 
-                if(nx !in 0 until c || ny !in 0 until r || graph[ny][nx] != '.'){
+                if(nx < 0 || nx >= c || ny < 0 || ny >= r || graph[ny][nx] != '.'){
                     continue
                 }
 
@@ -40,13 +44,13 @@ private fun solution(r:Int, c:Int, graph:Array<CharArray>, person:ArrayDeque<Poi
         }
 
         repeat(person.size){
-            val (x, y) = person.removeFirst()
+            val pPos = person.removeFirst()
 
-            for ((dx, dy) in dirs){
-                val nx = x + dx
-                val ny = y + dy
+            for (dir in 0 .. 3){
+                val nx = pPos.x + dx[dir]
+                val ny = pPos.y + dy[dir]
 
-                if(nx !in 0 until c || ny !in 0 until r || visited[ny][nx] || graph[ny][nx] != '.'){
+                if(nx < 0 || nx >= c || ny < 0 || ny >= r || visited[ny][nx] || graph[ny][nx] != '.'){
                     continue
                 }
 
@@ -64,9 +68,9 @@ private fun solution(r:Int, c:Int, graph:Array<CharArray>, person:ArrayDeque<Poi
 }
 
 private fun main() = with(System.`in`.bufferedReader()){
-    val (r, c) = readLine().split(" ").map {
-        it.toInt()
-    }
+    val tokenizer = StringTokenizer(readLine(), " ")
+    val r = tokenizer.nextToken().toInt()
+    val c = tokenizer.nextToken().toInt()
 
     val person = ArrayDeque<Point>()
     val fire = ArrayDeque<Point>()

@@ -1,33 +1,36 @@
 //https://www.acmicpc.net/problem/1926
 package solution1926
 
-import java.io.BufferedWriter
-import java.io.OutputStreamWriter
+import java.util.Queue
+import java.util.LinkedList
 import java.util.StringTokenizer
-import java.util.ArrayDeque
 
+private class Node(val x:Int, val y:Int)
 
-private val dirs = arrayOf(1 to 0, 0 to -1, -1 to 0, 0 to 1)
+private val dx = intArrayOf(0, 1, 0, -1)
+private val dy = intArrayOf(1, 0, -1, 0)
 
 private fun bfs(n:Int, m:Int, graph: Array<Array<Int>>, sx:Int, sy:Int) : Int{
-    val deque = ArrayDeque<Pair<Int, Int>>().apply{
-        add(sx to sy)
-    }
-    var size = 1
+    val queue: Queue<Node> = LinkedList()
+    queue.add(Node(sx, sy))
+
     graph[sy][sx] = 0
+    var size = 1
 
-    while(deque.isNotEmpty()){
-        val (x, y) = deque.removeFirst()
+    while(queue.isNotEmpty()){
+        val cur = queue.poll()
 
-        for((dx, dy) in dirs){
-            val (nx, ny) = x + dx to y + dy
-            if(nx !in 0 until m || ny !in 0 until n || graph[ny][nx] == 0){
+        for(dir in 0 .. 3){
+            val nx = cur.x + dx[dir]
+            val ny = cur.y + dy[dir]
+
+            if(nx < 0 || nx >= m || ny < 0 || ny >= n || graph[ny][nx] == 0){
                 continue
             }
 
             size += 1
             graph[ny][nx] = 0
-            deque.add(nx to ny)
+            queue.add(Node(nx, ny))
         }
     }
     return size
@@ -52,22 +55,18 @@ private fun solution(n:Int, m:Int, graph:Array<Array<Int>>) : Array<Int>{
 }
 
 private fun main() = with(System.`in`.bufferedReader()){
-    val bw = BufferedWriter(OutputStreamWriter(System.out))
-
-    val (n, m) = readLine().split(" ").map{
-        it.toInt()
-    }
+    var tokenizer = StringTokenizer(readLine(), " ")
+    val n = tokenizer.nextToken().toInt()
+    val m = tokenizer.nextToken().toInt()
 
     val graph = Array(n){
-        val tokenizer = StringTokenizer(readLine())
+        tokenizer = StringTokenizer(readLine(), " ")
         Array(m){
-            tokenizer.nextToken()?.toInt() ?: 0
+            tokenizer.nextToken().toInt()
         }
     }
 
     solution(n, m, graph).forEach {
-        bw.write("$it\n")
+        println(it)
     }
-    bw.flush()
-    bw.close()
 }

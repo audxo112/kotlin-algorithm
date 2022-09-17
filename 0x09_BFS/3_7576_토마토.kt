@@ -1,17 +1,14 @@
 //https://www.acmicpc.net/problem/7576
 package solution7576
 
-import java.util.StringTokenizer
+import java.util.*
 
-private data class Point(val x:Int, val y:Int)
+private class Point(val x:Int, val y:Int)
 
+private val dx = intArrayOf(0, 1, 0, -1)
+private val dy = intArrayOf(1, 0, -1, 0)
 
-private val dirs = arrayOf(
-    1 to 0, 0 to -1, -1 to 0, 0 to 1
-)
-
-
-private fun solution(m:Int, n:Int, graph:Array<IntArray>, tomato:ArrayDeque<Point>, minus:Int) : Int{
+private fun solution(m:Int, n:Int, graph:Array<IntArray>, tomato:Queue<Point>, minus:Int) : Int{
     var zero = m * n - tomato.size - minus
     if(zero == 0){
         return 0
@@ -20,12 +17,13 @@ private fun solution(m:Int, n:Int, graph:Array<IntArray>, tomato:ArrayDeque<Poin
     var date = 0
     while(tomato.isNotEmpty()){
         repeat(tomato.size){
-            val (x, y) = tomato.removeFirst()
+            val tPos = tomato.poll()
 
-            for((dx, dy) in dirs){
-                val (nx, ny) = x + dx to y + dy
+            for(dir in 0 .. 3){
+                val nx = tPos.x + dx[dir]
+                val ny = tPos.y + dy[dir]
 
-                if(nx !in 0 until m || ny !in 0 until n || graph[ny][nx] != 0){
+                if(nx < 0 || nx >= m || ny < 0 || ny >= n || graph[ny][nx] != 0){
                     continue
                 }
 
@@ -42,14 +40,14 @@ private fun solution(m:Int, n:Int, graph:Array<IntArray>, tomato:ArrayDeque<Poin
 
 
 private fun main() = with(System.`in`.bufferedReader()){
-    val (m, n) = readLine().split(" ").map{
-        it.toInt()
-    }
+    var tokenizer = StringTokenizer(readLine(), " ")
+    val m = tokenizer.nextToken().toInt()
+    val n = tokenizer.nextToken().toInt()
 
-    val tomato = ArrayDeque<Point>()
+    val tomato = LinkedList<Point>()
     var minus = 0
     val graph = Array(n){ y ->
-        val tokenizer = StringTokenizer(readLine())
+        tokenizer = StringTokenizer(readLine(), " ")
         IntArray(m){ x ->
             tokenizer.nextToken()?.toInt()?.also{ value ->
                 if(value == 1){

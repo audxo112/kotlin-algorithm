@@ -1,19 +1,17 @@
 ### 1926 그림
-![image](https://user-images.githubusercontent.com/9216335/189628495-a59170d6-ab1e-4f98-9e35-f482e1bfa5d3.png)
+![image](https://user-images.githubusercontent.com/9216335/190851707-c763ec59-119d-49a7-8a4c-ad24de74ade8.png)
 
 ### 2178 미로
-![image](https://user-images.githubusercontent.com/9216335/189628577-069bb715-c68e-4589-a453-d88b6932bec3.png)
+![image](https://user-images.githubusercontent.com/9216335/190851686-1f0b0091-d054-4d38-8d21-bc75c5136a32.png)
 
 ### 7576 토마토
-![image](https://user-images.githubusercontent.com/9216335/189825551-32399106-0883-4a97-9a95-4c3e6b789de5.png)
-
-- 메모리 사용량이 백준의 다른사람들과 차이가 나는 이유를 모르겠음
+![image](https://user-images.githubusercontent.com/9216335/190851674-84e6fc9b-328b-493b-8abd-262102a6efcd.png)
 
 ### 4179 불!
-![image](https://user-images.githubusercontent.com/9216335/190032200-33279b7d-c61a-4c22-a49d-5ff5eaf0458a.png)
+![image](https://user-images.githubusercontent.com/9216335/190851644-b407074a-816d-41cc-8982-d443c63b9f1b.png)
 
 ### 1697 숨바꼭질
-![image](https://user-images.githubusercontent.com/9216335/190296323-16691765-59a1-4bdd-b525-0737347e6651.png)
+![image](https://user-images.githubusercontent.com/9216335/190851628-d6c58470-dc5c-4154-acf1-66c1d8ee8cc3.png)
 
 ### 1012 유기농 배추
-![image](https://user-images.githubusercontent.com/9216335/190527118-3c2b801e-fb60-4744-aba4-74ad4aeb55a6.png)
+![image](https://user-images.githubusercontent.com/9216335/190851605-408feb01-71b1-41ab-b81f-a026d126ef02.png)
