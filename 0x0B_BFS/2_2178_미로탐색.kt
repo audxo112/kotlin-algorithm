@@ -1,76 +1,72 @@
 import java.util.*
 
+private val offset = arrayOf(
+    arrayOf(1, 0),
+    arrayOf(0, 1),
+    arrayOf(-1, 0),
+    arrayOf(0, -1)
+)
+
 fun main() = with(System.`in`.bufferedReader()) {
 
     val bw = System.out.bufferedWriter()
-    val nums = readLine().split(" ").map { it.toInt() }
+    val (n, m) = readLine().split(" ").map { it.toInt() }
 
-    val array = mutableListOf<String>()
-    val visited = mutableListOf<MutableList<Boolean>>()
-    val checked = mutableListOf<MutableList<Boolean>>()
-    val depth = mutableListOf<MutableList<Int>>()
 
-    for (i in 0 until nums[0]) {
-        array.add(readLine())
+    val array = Array(n) { it.toString() }
+    val before = Array(n) { Array<Pair<Int, Int>?>(m) { null } }
+
+    for (i in 0 until n) {
+        array[i] = readLine()
     }
 
-    for (i in 0 until nums[0]) {
-        visited.add(mutableListOf())
-        checked.add(mutableListOf())
-        depth.add(mutableListOf())
-        for (j in 0 until nums[1]) {
-            visited[i].add(false)
-            checked[i].add(false)
-            depth[i].add(1)
-        }
+    for (pairs in before) {
+        println(pairs.contentToString())
     }
-    bfs(0, 0, array, visited, depth, checked)
 
-    bw.write("${depth[nums[0] - 1][nums[1] - 1]}")
+    bfs(array, before)
+    for (pairs in before) {
+        println(pairs.contentToString())
+    }
+    before[0][0] = null
+
+    val count = findMinRouteCount(n, m, before)
+
+
+    bw.write("${count}")
     bw.flush()
     bw.close()
 
 }
 
-fun bfs(
-    i: Int,
-    j: Int,
-    array: MutableList<String>,
-    visited: MutableList<MutableList<Boolean>>,
-    depth: MutableList<MutableList<Int>>,
-    checked: MutableList<MutableList<Boolean>>
-) {
+fun findMinRouteCount(n: Int, m: Int, before: Array<Array<Pair<Int, Int>?>>): Any {
+    var cur: Pair<Int, Int>? = n - 1 to m - 1
+    var count = 0
+    while (true) {
+        if (cur == null) {
+            break
+        }
+        cur = before[cur.first][cur.second]
+        count++
+    }
+    return count
+}
+private fun bfs(array: Array<String>, before: Array<Array<Pair<Int, Int>?>>) {
     val queue: Queue<Pair<Int, Int>> = LinkedList()
-    queue.add(Pair(i, j))
+    queue.add(0 to 0)
 
     while (queue.isNotEmpty()) {
         val (x, y) = queue.remove()
 
-        if (visited[x][y]) {
-            continue
-        }
-        visited[x][y] = true
-
         for (off in offset) {
-            val newX = x + off[0]
-            val newY = y + off[1]
-            if (isPossibleIndex(newX, newY, array) && array[newX][newY] == '1' && !checked[newX][newY]) {
-                queue.add(Pair(newX, newY))
-                checked[newX][newY] = true
-                depth[newX][newY] = depth[x][y] + 1
+            val nx = x + off[0]
+            val ny = y + off[1]
+
+            if (nx in array.indices && ny in array[0].indices && array[nx][ny] == '1' && before[nx][ny] == null) {
+
+                queue.add(nx to ny)
+                before[nx][ny] = x to y
             }
         }
     }
-
-}
-
-fun isPossibleIndex(i: Int, j: Int, array: MutableList<String>): Boolean {
-    if (i < 0 || i >= array.size) {
-        return false
-    }
-    if (j < 0 || j >= array[i].length) {
-        return false
-    }
-
-    return true
 }

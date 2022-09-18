@@ -1,7 +1,7 @@
 import java.util.*
 
 
-val offset = arrayOf(
+private val offset = arrayOf(
     arrayOf(1, 0),
     arrayOf(0, 1),
     arrayOf(-1, 0),
