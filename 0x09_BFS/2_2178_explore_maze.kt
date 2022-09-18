@@ -1,8 +1,8 @@
-package `kotlin-algorithm`.`0x0B_BFS`
+package `kotlin-algorithm`.`0x09_BFS`
 
 import java.util.*
 
-fun main(): Unit = with(System.`in`.bufferedReader()) {
+fun main() = with(System.`in`.bufferedReader()) {
     val (n, m) = readLine().split(" ").map { it.toInt() }
     val dx = arrayOf(0, 0, -1, 1)
     val dy = arrayOf(-1, 1, 0, 0)
@@ -12,13 +12,13 @@ fun main(): Unit = with(System.`in`.bufferedReader()) {
 
     for (i in 0 until n) {
         maze.add(readLine().toCharArray().map {
-            it - '0'
+            it.digitToInt()
         })
     }
 
     val bfs = { x: Int, y: Int ->
         val que = LinkedList<Pair<Int, Int>>()
-        que.add(Pair(x, y))
+        que.add(x to y)
         visited[x][y] = true
         distance[x][y] = 1
 
@@ -33,7 +33,7 @@ fun main(): Unit = with(System.`in`.bufferedReader()) {
 
                 distance[a1][b1] = distance[a][b] + 1
                 visited[a1][b1] = true
-                que.add(Pair(a1, b1))
+                que.add(a1 to b1)
             }
         }
     }
