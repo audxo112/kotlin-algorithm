@@ -4,7 +4,7 @@ package solution15651
 import java.util.StringTokenizer
 
 
-private fun backTracking(N:Int, M:Int, m:Int, order:IntArray, builder:StringBuilder){
+private fun permutationWithRepetition(N:Int, M:Int, m:Int, order:IntArray, builder:StringBuilder){
     if(m == M){
         order.forEach {
             builder.append(it)
@@ -16,7 +16,7 @@ private fun backTracking(N:Int, M:Int, m:Int, order:IntArray, builder:StringBuil
 
     for(n in 1 .. N){
         order[m] = n
-        backTracking(N, M, m + 1, order, builder)
+        permutationWithRepetition(N, M, m + 1, order, builder)
     }
 }
 
@@ -24,7 +24,7 @@ private fun backTracking(N:Int, M:Int, m:Int, order:IntArray, builder:StringBuil
 private fun solution(n:Int, m:Int) : String{
     val order = IntArray(m)
     val builder = StringBuilder()
-    backTracking(n, m, 0, order, builder)
+    permutationWithRepetition(n, m, 0, order, builder)
 
     return builder.toString()
 }
