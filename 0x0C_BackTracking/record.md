@@ -9,3 +9,9 @@
 
 ### N 과 M (4)
 ![image](https://user-images.githubusercontent.com/9216335/190941638-30365329-37c0-4812-9b8a-01a989d078a7.png)
+
+### N 과 M (5)
+![image](https://user-images.githubusercontent.com/9216335/191142767-4632ec0c-66a3-4165-80ad-07446e4f829d.png)
+
+### N 과 M (6)
+![image](https://user-images.githubusercontent.com/9216335/191142724-e7ddd994-c5b8-47e5-900a-17cd55c1c667.png)
