@@ -27,3 +27,9 @@
 
 ### N 과 M (10)
 ![image](https://user-images.githubusercontent.com/9216335/191625309-7c0d9870-9085-4458-b036-590752ded498.png)
+
+### N 과 M (11)
+![image](https://user-images.githubusercontent.com/9216335/191865099-a8d50e0e-b0f3-4f7e-ab68-2a76b7c06141.png)
+
+### N 과 M (12)
+![image](https://user-images.githubusercontent.com/9216335/191865183-6d11663c-a9e2-4606-b5d1-9b2dd0bb18bd.png)
