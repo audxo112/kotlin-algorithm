@@ -4,7 +4,7 @@ package solution15666
 import java.util.StringTokenizer
 
 
-private fun permutation(N:Int, M:Int, n:Int, m:Int, numList:List<String>, order:IntArray, sb:StringBuilder) {
+private fun combination(N:Int, M:Int, n:Int, m:Int, numList:List<String>, order:IntArray, sb:StringBuilder) {
     if(m == M){
         order.forEach {
             sb.append(numList[it]).append(' ')
@@ -15,7 +15,7 @@ private fun permutation(N:Int, M:Int, n:Int, m:Int, numList:List<String>, order:
 
     for(i in n until N){
         order[m] = i
-        permutation(N, M, i, m + 1, numList, order, sb)
+        combination(N, M, i, m + 1, numList, order, sb)
     }
 }
 
@@ -24,7 +24,7 @@ private fun solution(n:Int, m:Int, numList:List<String>) : String{
     val sb = StringBuilder()
     val order = IntArray(m)
 
-    permutation(n, m, 0, 0, numList, order, sb)
+    combination(n, m, 0, 0, numList, order, sb)
 
     return sb.toString()
 }

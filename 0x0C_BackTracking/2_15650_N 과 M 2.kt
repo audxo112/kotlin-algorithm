@@ -4,7 +4,7 @@ package solution15650
 import java.util.*
 
 
-private fun combination(N:Int, M:Int, n:Int, m:Int, order:IntArray, visited:BooleanArray, builder:StringBuilder){
+private fun combination(N:Int, M:Int, n:Int, m:Int, order:IntArray, builder:StringBuilder){
     if(M == m){
         order.forEach{
             builder.append(it)
@@ -15,22 +15,16 @@ private fun combination(N:Int, M:Int, n:Int, m:Int, order:IntArray, visited:Bool
     }
 
     for (nn in n .. N){
-        if(visited[nn]){
-            continue
-        }
-        visited[nn] = true
         order[m] = nn
-        combination(N, M, nn + 1, m + 1, order, visited, builder)
-        visited[nn] = false
+        combination(N, M, nn + 1, m + 1, order, builder)
     }
 }
 
 private fun solution(n:Int, m:Int) : String{
     val builder = StringBuilder()
     val order = IntArray(m)
-    val visited = BooleanArray(n + 1)
 
-    combination(n, m, 1, 0, order, visited, builder)
+    combination(n, m, 1, 0, order, builder)
 
     return builder.toString()
 }
