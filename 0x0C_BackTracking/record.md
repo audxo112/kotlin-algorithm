@@ -33,3 +33,6 @@
 
 ### N 과 M (12)
 ![image](https://user-images.githubusercontent.com/9216335/191865183-6d11663c-a9e2-4606-b5d1-9b2dd0bb18bd.png)
+
+### N-Queen
+![image](https://user-images.githubusercontent.com/9216335/192170540-1554e76d-d788-4f69-ade1-ab1026e3e157.png)
