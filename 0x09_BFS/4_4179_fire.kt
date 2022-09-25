@@ -15,15 +15,16 @@ fun main() = with(System.`in`.bufferedReader()) {
         }
     }
 
+    // while 돌릴 때마다 해도 time++
     val bfs = bfs@ {
-        val queueJ = LinkedList<Triple<Int, Int, Int>>()
+        val queueJ = LinkedList<Pair<Int, Int>>()
         val queueF = LinkedList<Pair<Int, Int>>()
 
         for (i in 0 until r) {
             for (j in 0 until c) {
                 when (maze[i][j]) {
                     'J' -> {
-                        queueJ.offer(Triple(i, j, 0))
+                        queueJ.offer(i to j)
                         maze[i][j] = 'J'
                     }
                     'F' -> {
@@ -34,8 +35,9 @@ fun main() = with(System.`in`.bufferedReader()) {
             }
         }
 
-        var res = -1
+        var time = 0
         while (queueJ.isNotEmpty()) {
+            time++
             // 모든 불 한 번 번짐
             repeat(queueF.size) {
                 val (aF, bF) = queueF.poll()
@@ -52,25 +54,24 @@ fun main() = with(System.`in`.bufferedReader()) {
 
             // 이동
             repeat(queueJ.size) {
-                val (aJ, bJ, distance) = queueJ.poll()
+                val (aJ, bJ) = queueJ.poll()
                 for (i in 0 until 4) {
                     val a1 = aJ + dx[i]
                     val b1 = bJ + dy[i]
 
                     if (a1 < 0 || a1 >= r || b1 < 0 || b1 >= c) {
-                        res = distance + 1
-                        return@bfs res
+                        return@bfs time
                     }
 
                     if (maze[a1][b1] == 'F' || maze[a1][b1] == '#' || maze[a1][b1] == 'J') continue
 
                     maze[a1][b1] = 'J'
-                    queueJ.offer(Triple(a1, b1, distance + 1))
+                    queueJ.offer(a1 to b1)
                 }
             }
         }
 
-        return@bfs res
+        return@bfs time
     }
 
     bfs().let {

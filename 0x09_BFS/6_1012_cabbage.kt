@@ -50,7 +50,7 @@ fun main() = with(System.`in`.bufferedReader()) {
     }
 }
 
-fun dfs(array: Array<IntArray>, visited: Array<BooleanArray>, x: Int, y: Int, dx: Array<Int>, dy: Array<Int>) {
+private fun dfs(array: Array<IntArray>, visited: Array<BooleanArray>, x: Int, y: Int, dx: Array<Int>, dy: Array<Int>) {
     if (visited[x][y]) return
 
     visited[x][y] = true
