@@ -36,3 +36,6 @@
 
 ### N-Queen
 ![image](https://user-images.githubusercontent.com/9216335/192170540-1554e76d-d788-4f69-ade1-ab1026e3e157.png)
+
+### 부분수열의 합
+![image](https://user-images.githubusercontent.com/9216335/192397438-fabf4ea1-61df-4b21-8992-838c9a8a8806.png)
