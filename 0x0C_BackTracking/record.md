@@ -33,3 +33,15 @@
 
 ### N 과 M (12)
 ![image](https://user-images.githubusercontent.com/9216335/191865183-6d11663c-a9e2-4606-b5d1-9b2dd0bb18bd.png)
+
+### N-Queen
+![image](https://user-images.githubusercontent.com/9216335/192170540-1554e76d-d788-4f69-ade1-ab1026e3e157.png)
+
+### 부분수열의 합
+![image](https://user-images.githubusercontent.com/9216335/192410773-a767aeb1-23cb-499a-8be8-cea34a6d53b3.png)
+
+### 로또
+![image](https://user-images.githubusercontent.com/9216335/192641631-26edbcc3-3a1b-4dbc-86cf-481fc8e567a4.png)
+
+### 암호 만들기
+![image](https://user-images.githubusercontent.com/9216335/192913298-56ace099-67a4-48d7-8cc8-ab9b20d30cca.png)
