@@ -43,12 +43,21 @@ private fun backtracking3(
 
     var before = 0;
     for (i in input.indices) {
-        if (!used[i] && input[i] != before) {
+        if (!used[i]) {
+            if (input[i] == before) {
+                used[i] = true
+                continue
+            }
             output[cur] = input[i]
             before = output[cur]
-            used[i] = true
             backtracking3(cur + 1, n, m, input, output, used, sb)
-            used[i] = false
+            used[i] = true
+        }
+
+        if (used[n - 1]) {
+            for (j in i + 1 until n) {
+                used[j] = false
+            }
         }
     }
 }
