@@ -2,8 +2,8 @@ import java.util.*
 //https://www.acmicpc.net/problem/1182
 
 private var result = 0
-var output = IntArray(21)
-var used = BooleanArray(21)
+private var output = IntArray(21)
+private var used = BooleanArray(21)
 
 fun main() = with(System.`in`.bufferedReader()) {
 
