@@ -41,7 +41,7 @@
 ![image](https://user-images.githubusercontent.com/9216335/192410773-a767aeb1-23cb-499a-8be8-cea34a6d53b3.png)
 
 ### 로또
-![image](https://user-images.githubusercontent.com/9216335/192641631-26edbcc3-3a1b-4dbc-86cf-481fc8e567a4.png)
+![image](https://user-images.githubusercontent.com/9216335/193407653-d4ab3802-3750-4cb4-9577-0916d787d7fc.png)
 
 ### 암호 만들기
 ![image](https://user-images.githubusercontent.com/9216335/192913298-56ace099-67a4-48d7-8cc8-ab9b20d30cca.png)

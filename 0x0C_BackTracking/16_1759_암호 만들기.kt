@@ -23,11 +23,13 @@ private fun combination(N:Int, M:Int, n:Int, m:Int, vc:Int, wordArr:CharArray, v
 
 
 private fun solution(L:Int, C:Int, wordArr:CharArray) : String {
-    val vowelSet = setOf('a', 'e', 'i', 'o', 'u')
     val sb = StringBuilder()
     val order = CharArray(L)
     val vowels = IntArray(C){
-        if(wordArr[it] in vowelSet) 1 else 0
+        when(wordArr[it]){
+            'a', 'e', 'i', 'o', 'u' -> 1
+            else -> 0
+        }
     }
     combination(C, L, 0, 0, 0, wordArr, vowels, order, sb)
 
