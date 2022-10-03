@@ -46,9 +46,13 @@ private fun backtracking3(
         if (!used[i] && input[i] != before) {
             output[cur] = input[i]
             before = output[cur]
-            used[i] = true
+            for (j in 0..i) {
+                used[j] = true
+            }
             backtracking3(cur + 1, n, m, input, output, used, sb)
-            used[i] = false
+            for (j in 0..i) {
+                used[j] = false
+            }
         }
     }
 }
