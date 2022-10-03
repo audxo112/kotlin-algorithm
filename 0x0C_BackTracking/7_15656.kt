@@ -1,13 +1,13 @@
 package `kotlin-algorithm`.`0x0C_BackTracking`
 
 private val sb = StringBuilder()
-private lateinit var arr: List<Int>
-private lateinit var res: IntArray
+private lateinit var arr: List<String>
+private lateinit var res: Array<String>
 
 fun main() = with(System.`in`.bufferedReader()) {
     val (n, m) = readLine().split(' ').map { it.toInt() }
-    arr = readLine().split(' ').map { it.toInt() }.sorted()
-    res = IntArray(m)
+    arr = readLine().split(' ').sortedBy { it.toInt() }
+    res = Array(m) { "" }
 
     dfs(0)
 

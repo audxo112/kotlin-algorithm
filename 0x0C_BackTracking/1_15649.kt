@@ -1,5 +1,9 @@
 package `kotlin-algorithm`.`0x0C_BackTracking`
 
+/*
+    순열 문제 : 순서O, 중복X
+ */
+
 private val sb = StringBuilder()
 private lateinit var arr: IntArray
 private lateinit var visited: BooleanArray

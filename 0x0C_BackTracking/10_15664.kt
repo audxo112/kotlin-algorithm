@@ -1,14 +1,13 @@
 package `kotlin-algorithm`.`0x0C_BackTracking`
 
 private val sb = StringBuilder()
-private lateinit var arr: List<Int>
-private lateinit var res: IntArray
-private val set = HashSet<String>()
+private lateinit var arr: List<String>
+private lateinit var res: Array<String>
 
 fun main() = with(System.`in`.bufferedReader()) {
     val (n, m) = readLine().split(' ').map { it.toInt() }
-    arr = readLine().split(' ').map { it.toInt() }.sorted()
-    res = IntArray(m)
+    arr = readLine().split(' ').sortedBy { it.toInt() }
+    res = Array(m) { "" }
 
     dfs(0, 0)
 
@@ -17,21 +16,19 @@ fun main() = with(System.`in`.bufferedReader()) {
 
 private fun dfs(idx: Int, start: Int) {
     if (idx == res.size) {
-        val tmp = StringBuilder()
         res.forEach {
-            tmp.append("$it ")
+            sb.append("$it ")
         }
-        tmp.toString().let {
-            if (!set.contains(it)) {
-                set.add(it)
-                sb.append(it).append('\n')
-            }
-        }
+        sb.append('\n')
         return
     }
 
+    var before = ""
     for (i in start until arr.size) {
-        res[idx] = arr[i]
-        dfs(idx + 1, i + 1)
+        if (before != arr[i]) {
+            before = arr[i]
+            res[idx] = arr[i]
+            dfs(idx + 1, i + 1)
+        }
     }
 }
