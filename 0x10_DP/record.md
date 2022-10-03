@@ -9,3 +9,9 @@
 
 ## 2579 계단오르기 code2
 ![image](https://user-images.githubusercontent.com/9216335/193504122-c94f24dd-e297-48c0-a327-63a07ffc61f2.png)
+
+## 1149 RGB거리 code1
+![image](https://user-images.githubusercontent.com/9216335/193705105-3337b9fe-ee6e-49b5-bc67-63f1efc6b7bd.png)
+
+## 1149 RGB거리 code2
+![image](https://user-images.githubusercontent.com/9216335/193705149-b9189b72-2fc7-4cde-acf5-310d88b09164.png)
