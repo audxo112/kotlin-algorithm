@@ -15,3 +15,6 @@
 
 ## 1149 RGB거리 code2
 ![image](https://user-images.githubusercontent.com/9216335/193705149-b9189b72-2fc7-4cde-acf5-310d88b09164.png)
+
+## 11726 2xn 타일링
+![image](https://user-images.githubusercontent.com/9216335/193949081-c8b83734-729c-419d-8b17-185c0df757b7.png)
