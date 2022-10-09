@@ -27,3 +27,9 @@
 
 ## 11659 구간 합 구하기 4
 ![image](https://user-images.githubusercontent.com/9216335/194737756-cf3f6abe-4839-4cf8-8371-525113d1f769.png)
+
+## 12852 1로 만들기2 code 1
+![image](https://user-images.githubusercontent.com/9216335/194785097-bedc64a0-1793-478c-86a4-870f38d07d24.png)
+
+## 12852 1로 만들기2 code 2
+![image](https://user-images.githubusercontent.com/9216335/194785109-689c8414-2251-4510-ae1b-b1a4142451b4.png)
