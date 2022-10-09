@@ -15,12 +15,9 @@ fun main() {
     val l = st.nextToken().toInt()
     val c = st.nextToken().toInt()
     res = CharArray(l)
-    arr = CharArray(c)
 
     st = StringTokenizer(br.readLine())
-    for (i in arr.indices) {
-        arr[i] = st.nextToken()[0]
-    }
+    arr = CharArray(c) { st.nextToken()[0] }
     arr.sort()
 
     dfs(0, 0, 0)

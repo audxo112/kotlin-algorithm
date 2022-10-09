@@ -5,7 +5,7 @@ import java.io.InputStreamReader
 import java.util.StringTokenizer
 
 private val sb = StringBuilder()
-private val res = IntArray(6)
+private val res = Array<String>(6) { "" }
 
 fun main() {
     val br = BufferedReader(InputStreamReader(System.`in`))
@@ -15,10 +15,7 @@ fun main() {
         val k = st.nextToken().toInt()
         if (k == 0) break
 
-        val arr = IntArray(k)
-        for (i in arr.indices) {
-            arr[i] = st.nextToken().toInt()
-        }
+        val arr = Array<String>(k) { st.nextToken() }
 
         dfs(0, 0, arr)
         sb.append('\n')
@@ -27,7 +24,7 @@ fun main() {
     println(sb.toString())
 }
 
-private fun dfs(idx: Int, start: Int, arr: IntArray) {
+private fun dfs(idx: Int, start: Int, arr: Array<String>) {
     if (idx == res.size) {
         res.forEach {
             sb.append("$it ")

@@ -1,7 +1,6 @@
 package `kotlin-algorithm`.`0x0C_BackTracking`
 
 import kotlin.math.abs
-import kotlin.math.absoluteValue
 
 private lateinit var visited: Array<BooleanArray>
 private lateinit var array: IntArray
@@ -37,7 +36,7 @@ private fun isPossibleColumn(row: Int, column: Int): Boolean {
     for (i in 0 until row) {
         if (array[i] == column) {
             return false
-        } else if (abs(array[i] - column) == abs(i - row)) {
+        } else if (abs(array[i] - column) == row - i) {
             return false
         }
     }
