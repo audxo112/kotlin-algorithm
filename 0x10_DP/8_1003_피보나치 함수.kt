@@ -1,7 +1,6 @@
 package `kotlin-algorithm`.`0x10_DP`
 
 import java.util.StringTokenizer
-
 fun main(){
     var st = StringTokenizer(readln())
     val t = st.nextToken().toInt()
