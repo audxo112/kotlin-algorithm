@@ -42,3 +42,6 @@
 
 ## 1932 정수 삼각형 code2
 ![image](https://user-images.githubusercontent.com/9216335/195215677-1148dd16-b9d4-4ee6-8a14-b4f6a4bf9564.png)
+
+## 11727 2xn 타일링 2
+![image](https://user-images.githubusercontent.com/9216335/195724995-6846cd32-1568-44e4-b388-64d79def551d.png)
