@@ -45,3 +45,6 @@
 
 ## 11727 2xn 타일링 2
 ![image](https://user-images.githubusercontent.com/9216335/195724995-6846cd32-1568-44e4-b388-64d79def551d.png)
+
+## 2193 이친수
+![image](https://user-images.githubusercontent.com/9216335/195955857-5628809c-2a6f-4a57-bc5a-b537ce004c2d.png)
