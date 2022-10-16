@@ -34,8 +34,12 @@
 ## 12852 1로 만들기2 code2
 ![image](https://user-images.githubusercontent.com/9216335/194785109-689c8414-2251-4510-ae1b-b1a4142451b4.png)
 
-## 1003 피보나치 함수
+## 1003 피보나치 함수 code1
 ![image](https://user-images.githubusercontent.com/9216335/194964095-9f1fedcc-a16a-4bc5-add5-c26740dbdda1.png)
+
+## 1003 피보나치 함수 code2
+![image](https://user-images.githubusercontent.com/9216335/196012663-9b66e0ad-e093-4648-b7db-e05fe87eb42b.png)
+
 
 ## 1932 정수 삼각형 code1
 ![image](https://user-images.githubusercontent.com/9216335/195215719-7cad3e1b-1bac-4bba-9f20-a65de22faa38.png)
