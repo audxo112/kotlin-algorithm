@@ -15,8 +15,7 @@ private fun getDp(n:Int, stairs:IntArray, dp:IntArray) : Int{
     }
 
     dp[n] = stairs[n] + Math.max(
-        getDp(n - 2, stairs, dp),
-        stairs[n - 1] + getDp(n - 3, stairs, dp)
+        getDp(n - 2, stairs, dp), stairs[n - 1] + getDp(n - 3, stairs, dp)
     )
 
     return dp[n]

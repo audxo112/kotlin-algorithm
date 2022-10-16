@@ -14,6 +14,7 @@ private fun main() = with(System.`in`.bufferedReader()){
     val dp = Array(n) {
         IntArray(3)
     }
+
     var tokenizer = StringTokenizer(readLine(), " ")
     dp[0][0] = tokenizer.nextToken().toInt()
     dp[0][1] = tokenizer.nextToken().toInt()
