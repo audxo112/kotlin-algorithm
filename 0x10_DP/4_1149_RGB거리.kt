@@ -2,6 +2,7 @@ package `kotlin-algorithm`.`0x10_DP`
 
 import kotlin.math.min
 
+
 fun main(){
     val n = readln().toInt()
 

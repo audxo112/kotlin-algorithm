@@ -1,6 +1,7 @@
 package `kotlin-algorithm`.`0x10_DP`
 
-import java.util.StringTokenizer
+import java.util.*
+
 
 fun main(){
 
@@ -10,8 +11,12 @@ fun main(){
     for (k in 1..n){
         dp[k] = dp[k-1] + st.nextToken().toInt()
     }
+
+    val sb = StringBuilder()
     for(k in 1..m){
         val (i,j) = readln().split(" ").map { it.toInt() }
-        println(dp[j] - dp[i-1])
+
+        sb.appendLine(dp[j] - dp[i-1])
     }
+    println(sb)
 }

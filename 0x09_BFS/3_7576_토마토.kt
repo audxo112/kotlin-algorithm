@@ -44,7 +44,6 @@ fun main(){
 
 private fun bfs(n:Int,m:Int,graph:Array<IntArray>,tomatoes:LinkedList<Pair<Int,Int>>){
 
-
     while (tomatoes.isNotEmpty()){
         val (x,y) = tomatoes.poll()
 
@@ -56,9 +55,7 @@ private fun bfs(n:Int,m:Int,graph:Array<IntArray>,tomatoes:LinkedList<Pair<Int,I
             else if (graph[nx][ny] == 0){
                 graph[nx][ny] = graph[x][y] + 1
                 tomatoes.add(nx to ny)
-                continue
             }
-            else continue
         }
     }
 }
