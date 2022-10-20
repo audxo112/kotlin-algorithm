@@ -18,3 +18,6 @@
 
 ## 2217 로프 code3
 ![image](https://user-images.githubusercontent.com/9216335/196589755-10fdfd2f-0ef5-42fe-95ea-9c6475e1afc6.png)
+
+## 1026 보물
+![image](https://user-images.githubusercontent.com/9216335/196839446-69c2c332-4504-41c2-88e9-a3e6b5844307.png)
