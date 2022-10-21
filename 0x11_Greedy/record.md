@@ -21,3 +21,7 @@
 
 ## 1026 보물
 ![image](https://user-images.githubusercontent.com/9216335/196839446-69c2c332-4504-41c2-88e9-a3e6b5844307.png)
+
+## 11399 ATM
+![image](https://user-images.githubusercontent.com/9216335/197081776-78f3151a-8477-4fda-8820-747cf27e85c0.png)
+
