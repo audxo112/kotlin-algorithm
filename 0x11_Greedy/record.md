@@ -33,3 +33,9 @@
 
 ## 1541 잃어버린 괄호 code2
 ![image](https://user-images.githubusercontent.com/9216335/197375757-a8d676a3-9ffc-474f-8d2a-f03425258382.png)
+
+## 11501 주식 code1
+![image](https://user-images.githubusercontent.com/9216335/197424460-051e4e10-eff9-4a2f-a6a8-e362dc0044cf.png)
+
+## 11501 주식 code2
+![image](https://user-images.githubusercontent.com/9216335/197424482-8a252096-e178-4069-abee-70820ce25b47.png)
