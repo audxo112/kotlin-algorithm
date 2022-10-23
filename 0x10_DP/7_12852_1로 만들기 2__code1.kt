@@ -2,6 +2,16 @@
 package solution12852
 
 
+/**
+ * DP를 계산 후 경우의 수는 어떤걸 출력해도 상관이 없으므로
+ * 1을 빼거나 나누어 떨어질 때 나누거나 했을 경우
+ * dp[n] - 1 == dp[n - 1]
+ * dp[n] - 1 == dp[n / 2]
+ * dp[n] - 1 == dp[n / 3]
+ * 결국 경우의 수가 다를 뿐 어디로 가든 목적지까지 거리는 같다
+ */
+
+
 private fun getDp(N:Int, dp:IntArray) : Int{
     for(n in 2 .. N){
         dp[n] = dp[n - 1] + 1

@@ -2,6 +2,13 @@
 package solution11727
 
 
+/**
+ * 1개를 만드는 경우의 수 1
+ * 2개를 만드는 경우의 수 3
+ * 1 : 1개를 만드는 경우의 수
+ * 0 : 2개를 만드는 경우의 수
+ */
+
 private fun main() = with(System.`in`.bufferedReader()){
     val N = readLine().toInt()
     val dp = IntArray(N + 2)

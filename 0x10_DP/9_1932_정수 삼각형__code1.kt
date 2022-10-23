@@ -19,11 +19,13 @@ private fun main() = with(System.`in`.bufferedReader()){
     triangle[0][0] = readLine().toInt()
     for (i in 1 until n){
         val tokenizer = StringTokenizer(readLine(), " ")
-        triangle[i][0] = tokenizer.nextToken().toInt() + triangle[i - 1][0]
-        for (j in 1 until i){
-            triangle[i][j] = tokenizer.nextToken().toInt() + triangle[i - 1][j - 1].coerceAtLeast(triangle[i - 1][j])
+        for (j in 0 .. i){
+            triangle[i][j] = tokenizer.nextToken().toInt() + when(j){
+                0 -> triangle[i - 1][0]
+                i -> triangle[i - 1][i - 1]
+                else -> triangle[i - 1][j - 1].coerceAtLeast(triangle[i - 1][j])
+            }
         }
-        triangle[i][i] = tokenizer.nextToken().toInt() + triangle[i - 1][i - 1]
     }
     var maxValue = triangle[n - 1][0]
     for (i in 1 until n){
