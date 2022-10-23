@@ -27,3 +27,9 @@
 
 ## 2457 공주님의 정원
 ![image](https://user-images.githubusercontent.com/9216335/197160985-db8e76aa-54e8-482e-a433-e9ebc10e0c72.png)
+
+## 1541 잃어버린 괄호 code1
+![image](https://user-images.githubusercontent.com/9216335/197375745-721ca395-c4a3-45ca-94be-14b058c51eae.png)
+
+## 1541 잃어버린 괄호 code2
+![image](https://user-images.githubusercontent.com/9216335/197375757-a8d676a3-9ffc-474f-8d2a-f03425258382.png)
