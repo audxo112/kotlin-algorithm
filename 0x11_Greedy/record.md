@@ -46,3 +46,5 @@
 ## 2847 게임을 만든 동준이
 ![image](https://user-images.githubusercontent.com/9216335/197905246-cf6d3dba-cd13-44ad-88e7-6074401aa1de.png)
 
+## 1439 뒤집기
+![image](https://user-images.githubusercontent.com/9216335/198155288-8d4289a0-cb79-4631-b364-8b60fa6fbfcd.png)
