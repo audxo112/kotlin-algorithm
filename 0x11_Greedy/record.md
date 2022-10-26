@@ -39,3 +39,10 @@
 
 ## 11501 주식 code2
 ![image](https://user-images.githubusercontent.com/9216335/197424482-8a252096-e178-4069-abee-70820ce25b47.png)
+
+## 1744 수 묶기
+![image](https://user-images.githubusercontent.com/9216335/197675049-486f2fc6-30ec-402c-b377-0eae80704309.png)
+
+## 2847 게임을 만든 동준이
+![image](https://user-images.githubusercontent.com/9216335/197905246-cf6d3dba-cd13-44ad-88e7-6074401aa1de.png)
+
