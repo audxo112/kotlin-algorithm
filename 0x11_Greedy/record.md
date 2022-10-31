@@ -12,3 +12,9 @@
 
 ### 6. 공주님의 정원
 <img width="1141" alt="image" src="https://user-images.githubusercontent.com/54929665/197369154-aaa2078e-2860-4b29-9abd-9280e17bbcbd.png">
+
+### 10. 게임을 만든 동준이
+<img width="1142" alt="image" src="https://user-images.githubusercontent.com/54929665/198832701-2be37e6c-5643-4aae-a170-742862dc7f2c.png">
+
+### 11. 뒤집기
+<img width="1138" alt="image" src="https://user-images.githubusercontent.com/54929665/198833234-bc29cfda-02fd-4a69-a656-b4c886e8d2fb.png">
