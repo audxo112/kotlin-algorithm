@@ -1,5 +1,8 @@
 //https://www.acmicpc.net/problem/1541
 package solution1541
+/**
+ *  - 가 나오는 시점이 중요했던 문제
+ * */
 
 
 private fun main(){

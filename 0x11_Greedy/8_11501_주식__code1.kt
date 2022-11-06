@@ -1,17 +1,26 @@
 //https://www.acmicpc.net/problem/11501
 package solution11501
 
-import java.util.StringTokenizer
+/**
+ *
+ */
 
-private fun main() = with(System.`in`.bufferedReader()){
-    val T = readLine().toInt()
+import java.io.StreamTokenizer
+
+private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
+    fun input(): Int {
+        nextToken()
+        return nval.toInt()
+    }
+
+    val T = input()
+    val sb = StringBuilder()
     val prices = IntArray(10001)
 
     repeat(T) {
-        val N = readLine().toInt()
-        val tokenizer = StringTokenizer(readLine(), " ")
+        val N = input()
         val arr = IntArray(N){
-            val value = tokenizer.nextToken().toInt()
+            val value = input()
             prices[value] += 1
             value
         }
@@ -27,6 +36,7 @@ private fun main() = with(System.`in`.bufferedReader()){
             }
             prices[arr[i]] -= 1
         }
-        println(sum)
+        sb.appendLine(sum)
     }
+    println(sb.toString())
 }
