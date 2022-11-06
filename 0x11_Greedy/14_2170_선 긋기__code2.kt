@@ -2,7 +2,10 @@
 package solution2170__code2
 
 /**
- *
+ * 어차피 중복된 선이 많다면 처음 값을 넣을때 중복되는 선을 합쳐서 계산을 해본다면 ?
+ * 새로운 선의 x값이 포함된 선이 존재하고 y값이 새로운 선이 더 크다면 기존선의 값을 변경
+ * 없다면 선을 추가하지 않는다
+ * y 값에 대해서도 동일
  */
 
 import java.io.StreamTokenizer
@@ -39,7 +42,9 @@ private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run{
         nums.add(line)
     }
 
-    nums.sortWith{num1, num2 -> num1.x.compareTo(num2.x)}
+    nums.sortWith{num1, num2 ->
+        if(num1.x == num2.x) num1.y.compareTo(num2.y) else num1.x.compareTo(num2.x)
+    }
 
     var sum = 0L
     var start = nums[0].x

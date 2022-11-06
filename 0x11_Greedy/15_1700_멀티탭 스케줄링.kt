@@ -1,6 +1,14 @@
 // https://www.acmicpc.net/problem/1700
 package solution1700
 
+/**
+ * 각각 종류에 따른 LinkedList를 이용하여 언제 쓰이는지 확인
+ * 1. 지금 들어온 기기가 이미 멀티탭에 꽂혀있는지 확인
+ * 2. 빈공간이 있는지 확인
+ * 3. 이미 꽂혀있는 것들중 앞으로 쓰이지 않을 기기와 교체 (교체수 +)
+ * 4. 꾳혀있는 것중 가장 나중에 쓸 것을 교체 (교체수 +)
+ */
+
 import java.io.StreamTokenizer
 import java.util.LinkedList
 

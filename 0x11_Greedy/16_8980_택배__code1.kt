@@ -1,5 +1,11 @@
 // https://www.acmicpc.net/problem/8980
-package solution8980
+package solution8980__code1
+
+/**
+ * https://jaimemin.tistory.com/764
+ * 1. 택배가 구간에서 최대 적재량을 파악하여 지금 실을 수 있는 양을 계산
+ * 2. 구간에 실을 수 있는 양을 적재
+ */
 
 import java.io.StreamTokenizer
 
@@ -32,8 +38,9 @@ private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
         }
         val amount = delivery.amount.coerceAtMost(C - boxCnt)
         total += amount
-        for(i in delivery.start until delivery.end)
+        for(i in delivery.start until delivery.end) {
             truck[i] += amount
+        }
     }
     println(total)
 }
