@@ -1,3 +1,6 @@
+<!--
+https://github.com/audxo112/kotlin-algorithm/issues/11
+-->
 ### N 과 M (1)
 ![image](https://user-images.githubusercontent.com/9216335/190881404-cf2aab3c-c17c-4784-8f93-64c68a1ad410.png)
 

@@ -1,17 +1,20 @@
 //https://www.acmicpc.net/problem/11501
 package solution11501
 
-import java.util.StringTokenizer
+import java.io.StreamTokenizer
 
-private fun main() = with(System.`in`.bufferedReader()){
-    val T = readLine().toInt()
+private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
+    fun input(): Int {
+        nextToken()
+        return nval.toInt()
+    }
+
+    val T = input()
+    val sb = StringBuilder()
 
     repeat(T) {
-        val N = readLine().toInt()
-        val tokenizer = StringTokenizer(readLine(), " ")
-        val scores = IntArray(N){
-            tokenizer.nextToken().toInt()
-        }
+        val N = input()
+        val scores = IntArray(N){ input() }
 
         var sum = 0L
         var max = 0
@@ -23,6 +26,7 @@ private fun main() = with(System.`in`.bufferedReader()){
                 sum += (max - scores[i])
             }
         }
-        println(sum)
+        sb.appendLine(sum)
     }
+    println(sb.toString())
 }

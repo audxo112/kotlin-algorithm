@@ -1,4 +1,5 @@
 // https://www.acmicpc.net/problem/11000
+package solution11000
 
 import java.util.PriorityQueue
 import java.io.StreamTokenizer
