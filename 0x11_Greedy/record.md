@@ -73,4 +73,5 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 ## 8980 택배
 ![image](https://user-images.githubusercontent.com/9216335/200124090-d703a619-b607-443e-a940-1066bf8380c5.png)
 
-## 
+## 7570 줄 세우기
+![image](https://user-images.githubusercontent.com/9216335/200151220-19c66917-e00d-40af-955d-1cde4859f6d2.png)
