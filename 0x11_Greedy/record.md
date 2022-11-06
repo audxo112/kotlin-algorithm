@@ -18,3 +18,9 @@
 
 ### 11. 뒤집기
 <img width="1138" alt="image" src="https://user-images.githubusercontent.com/54929665/198833234-bc29cfda-02fd-4a69-a656-b4c886e8d2fb.png">
+
+### 12. 카드합체놀이
+- sort
+- 삽입정렬
+- 우선순위 큐
+<img width="1141" alt="image" src="https://user-images.githubusercontent.com/54929665/199068351-57cdc802-a536-419e-bc74-ac9fee31b6e1.png">
