@@ -15,3 +15,9 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 
 ## 3. 18870 좌표 압축 code2
 ![image](https://user-images.githubusercontent.com/9216335/200743984-2694f50e-bea8-4c64-bc36-b4b47f4104e0.png)
+
+## 4. 2295 세 수의 합 code1
+![image](https://user-images.githubusercontent.com/9216335/200992303-66e1494c-6a93-4aed-be79-25c8defc1753.png)
+
+## 4. 2295 세 수의 합 code2
+![image](https://user-images.githubusercontent.com/9216335/200992366-2fde37e2-159f-4a6e-b0da-ce7fe39a11ee.png)
