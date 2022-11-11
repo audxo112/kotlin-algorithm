@@ -21,3 +21,6 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 
 ## 4. 2295 세 수의 합 code2
 ![image](https://user-images.githubusercontent.com/9216335/200992366-2fde37e2-159f-4a6e-b0da-ce7fe39a11ee.png)
+
+## 5 1654 랜선 자르기
+![image](https://user-images.githubusercontent.com/9216335/201256190-10dbdaf0-ef87-40bf-b26f-70126301069e.png)

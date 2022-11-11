@@ -6,9 +6,9 @@ import java.io.StreamTokenizer
 
 private fun solution(arr:List<Int>) : Int{
     val set = hashSetOf<Int>()
-    for (num1 in arr){
-        for (num2 in arr){
-            set.add(num1 + num2)
+    for (i in arr.indices){
+        for(j in i until arr.size){
+            set.add(arr[i] + arr[j])
         }
     }
 
