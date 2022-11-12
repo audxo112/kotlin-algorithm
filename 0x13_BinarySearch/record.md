@@ -17,10 +17,13 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 ![image](https://user-images.githubusercontent.com/9216335/200743984-2694f50e-bea8-4c64-bc36-b4b47f4104e0.png)
 
 ## 4. 2295 세 수의 합 code1
-![image](https://user-images.githubusercontent.com/9216335/200992303-66e1494c-6a93-4aed-be79-25c8defc1753.png)
+![image](https://user-images.githubusercontent.com/9216335/201452360-11e5fdb7-b6bc-4a4d-baf4-7b45233d8aba.png)
 
 ## 4. 2295 세 수의 합 code2
 ![image](https://user-images.githubusercontent.com/9216335/200992366-2fde37e2-159f-4a6e-b0da-ce7fe39a11ee.png)
 
 ## 5 1654 랜선 자르기
 ![image](https://user-images.githubusercontent.com/9216335/201258422-9f956255-ca4b-467a-ac5a-66dcb37ea578.png)
+
+## 6 10815 숫자 카드
+![image](https://user-images.githubusercontent.com/9216335/201451737-9f3b5fdc-8084-4193-b328-24c281c43f27.png)
