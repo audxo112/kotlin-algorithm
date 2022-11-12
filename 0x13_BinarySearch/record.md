@@ -23,4 +23,4 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 ![image](https://user-images.githubusercontent.com/9216335/200992366-2fde37e2-159f-4a6e-b0da-ce7fe39a11ee.png)
 
 ## 5 1654 랜선 자르기
-![image](https://user-images.githubusercontent.com/9216335/201256190-10dbdaf0-ef87-40bf-b26f-70126301069e.png)
+![image](https://user-images.githubusercontent.com/9216335/201258422-9f956255-ca4b-467a-ac5a-66dcb37ea578.png)

@@ -5,7 +5,7 @@ import java.io.StreamTokenizer
 
 private fun binarySearch(arr:LongArray, n:Int) : Long{
     var left = 1L
-    var right = Int.MAX_VALUE + 1L
+    var right = arr.fold(n.toLong()){ count, len -> count + len.div(n) }
 
     while(left < right){
         val mid = (left + right).div(2)
