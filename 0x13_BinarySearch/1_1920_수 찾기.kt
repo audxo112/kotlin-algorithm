@@ -8,7 +8,7 @@ private fun binarySearch(src:IntArray, value:Int) : Int{
     var right = src.size
 
     while(left < right){
-        val mid = left + (right - left).div(2)
+        val mid = (left + right).div(2)
         if(src[mid] == value){
             return 1
         }
@@ -32,12 +32,9 @@ private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run{
     val nArr = IntArray(n){ input() }
     nArr.sort()
 
-    val m = input()
-    val mArr = IntArray(m){ input() }
-
     val sb = StringBuilder()
-    for(value in mArr){
-        sb.appendLine(binarySearch(nArr, value))
+    repeat(input()){
+        sb.appendLine(binarySearch(nArr, input()))
     }
     println(sb.toString())
 }

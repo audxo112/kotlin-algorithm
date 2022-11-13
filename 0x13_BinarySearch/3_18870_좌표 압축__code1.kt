@@ -8,7 +8,7 @@ private fun binarySearch(arr:List<Int>, value:Int) : Int{
     var left = 0
     var right = arr.size
     while(left < right){
-        val mid = left + (right - left).div(2)
+        val mid = (left + right).div(2)
         if(value > arr[mid]){
             left = mid + 1
         }
