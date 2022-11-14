@@ -28,5 +28,8 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 ## 6 10815 숫자 카드
 ![image](https://user-images.githubusercontent.com/9216335/201451737-9f3b5fdc-8084-4193-b328-24c281c43f27.png)
 
-## 7 1822 차집합
+## 7 1822 차집합 code1
 ![image](https://user-images.githubusercontent.com/9216335/201550804-35c392d0-9e52-478b-befe-b069797caf64.png)
+
+## 7 1822 차집합 code2
+![image](https://user-images.githubusercontent.com/9216335/201552036-ba002c0a-9e78-4612-89de-ab1b28b1e0f4.png)
