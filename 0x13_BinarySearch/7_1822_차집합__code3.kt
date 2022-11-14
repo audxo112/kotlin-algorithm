@@ -1,27 +1,7 @@
 // https://www.acmicpc.net/problem/1822
-package solution1822__code2
+package solution1822__code3
 
 import java.io.StreamTokenizer
-import java.util.Collections
-
-private fun binarySearch(arr:IntArray, value:Int) : Boolean{
-    var left = 0
-    var right = arr.size
-
-    while(left < right){
-        val mid = (left + right).div(2)
-        if(arr[mid] == value){
-            return true
-        }
-        else if(arr[mid] > value){
-            right = mid
-        }
-        else{
-            left = mid + 1
-        }
-    }
-    return false
-}
 
 private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run{
     fun input() : Int{
@@ -35,14 +15,17 @@ private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run{
     val aArr = IntArray(nA){ input() }
     aArr.sort()
 
-    val bArr = IntArray(nB){ input() }
+    val bArr = ArrayList<Int>(nB)
+    repeat(nB){
+        bArr.add(input())
+    }
     bArr.sort()
 
     val sb = StringBuilder()
     var count = 0
 
     for(num in aArr){
-        if(!binarySearch(bArr, num)){
+        if(bArr.binarySearch(num) < 0){
             sb.append(num).append(' ')
             count += 1
         }

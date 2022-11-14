@@ -33,3 +33,6 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 
 ## 7 1822 차집합 code2
 ![image](https://user-images.githubusercontent.com/9216335/201552036-ba002c0a-9e78-4612-89de-ab1b28b1e0f4.png)
+
+## 7 1822 차집합 code3
+![image](https://user-images.githubusercontent.com/9216335/201552701-14a92c65-6bdc-46ad-ab47-0efcbd556557.png)
