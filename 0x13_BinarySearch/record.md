@@ -36,3 +36,6 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 
 ## 7 1822 차집합 code3
 ![image](https://user-images.githubusercontent.com/9216335/201552701-14a92c65-6bdc-46ad-ab47-0efcbd556557.png)
+
+## 8 16401 과자 나눠주기
+![image](https://user-images.githubusercontent.com/9216335/201793595-354d5944-0d1a-4a8e-bfbe-493b84d62612.png)
