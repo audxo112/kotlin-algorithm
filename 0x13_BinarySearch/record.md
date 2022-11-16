@@ -39,3 +39,6 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 
 ## 8 16401 과자 나눠주기
 ![image](https://user-images.githubusercontent.com/9216335/201793595-354d5944-0d1a-4a8e-bfbe-493b84d62612.png)
+
+## 9 2805 나무 자르기
+![image](https://user-images.githubusercontent.com/9216335/202052351-70618c6a-e6f8-4cfc-be64-9d9990a84744.png)
