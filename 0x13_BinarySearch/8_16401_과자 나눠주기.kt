@@ -4,15 +4,15 @@ package solution16401
 import java.io.StreamTokenizer
 
 
-private fun binarySearch(arr: LongArray, min:Long, max:Long, value: Long): Long {
-    var left = min
+private fun binarySearch(arr: IntArray, max:Int, value: Int): Int {
+    var left = 1
     var right = max
 
-    while(left < right){
+    while(left <= right){
         val mid = (left + right) / 2
-        val count = arr.fold(0L) { total, add -> total + add / mid }
+        val count = arr.fold(0) { total, add -> total + add / mid }
         if(count < value){
-            right = mid
+            right = mid - 1
         }
         else{
             left = mid + 1
@@ -23,21 +23,21 @@ private fun binarySearch(arr: LongArray, min:Long, max:Long, value: Long): Long 
 
 
 private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
-    fun input(): Long {
+    fun input(): Int {
         nextToken()
-        return nval.toLong()
+        return nval.toInt()
     }
 
     val m = input()
     val n = input()
-    var min = Long.MAX_VALUE
-    var max = 0L
-    val arr = LongArray(n.toInt()) {
-        input().also{value ->
-            min = value.coerceAtMost(min)
-            max = value.coerceAtLeast(max)
+    var max = 0
+    val arr = IntArray(n) {
+        input().also{ value ->
+            if(value > max){
+                max = value
+            }
         }
     }
 
-    println(binarySearch(arr, 1L.coerceAtLeast(min / m), max + 1, m))
+    println(binarySearch(arr, max + 1, m))
 }
