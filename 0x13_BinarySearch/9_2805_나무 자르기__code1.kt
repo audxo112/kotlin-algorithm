@@ -3,7 +3,10 @@ package solution2805
 
 import java.io.StreamTokenizer
 
-
+/*
+ * Parameteric Search
+ * isEnough 사용 전
+ */
 private fun binarySearch(max: Long, arr: LongArray, value: Long): Long {
     var left = 0L
     var right = max + 1

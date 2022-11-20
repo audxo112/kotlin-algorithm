@@ -4,21 +4,36 @@ package solution16401
 import java.io.StreamTokenizer
 
 
+/*
+ * Parameteric Search
+ * 주영님의 isEnough 방식 도입
+ */
+
 private fun binarySearch(arr: IntArray, max:Int, value: Int): Int {
     var left = 1
     var right = max
 
     while(left <= right){
         val mid = (left + right) / 2
-        val count = arr.fold(0) { total, add -> total + add / mid }
-        if(count < value){
-            right = mid - 1
+        if(isEnough(arr, mid, value)){
+            left = mid + 1
         }
         else{
-            left = mid + 1
+            right = mid - 1
         }
     }
     return left - 1
+}
+
+private fun isEnough(arr: IntArray, mid:Int, value: Int) : Boolean{
+    var count = 0
+    for(num in arr){
+        count += num / mid
+        if(count >= value){
+            return true
+        }
+    }
+    return false
 }
 
 

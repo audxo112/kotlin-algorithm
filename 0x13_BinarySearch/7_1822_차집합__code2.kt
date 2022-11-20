@@ -2,7 +2,10 @@
 package solution1822__code2
 
 import java.io.StreamTokenizer
-import java.util.Collections
+
+/*
+ * 그냥 배열을 sort를 이용하여 진행
+ */
 
 private fun binarySearch(arr:IntArray, value:Int) : Boolean{
     var left = 0
