@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/1654
-package solution1654
+package solution1654__code1
 
 import java.io.StreamTokenizer
 
