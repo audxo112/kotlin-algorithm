@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/18869
-package solution18869
+package solution18869__code2
 
 /*
  * Lower, Upper를 이용하여 Index 를 계산 하는 방법이 시간 초과가 걸려서
@@ -15,6 +15,10 @@ private fun binarySearch(arr:List<Int>, value:Int) : Int{
 
     while(left <= right){
         val mid = (left + right) / 2
+        if(arr[mid] == value){
+            return mid
+        }
+
         if(arr[mid] < value){
             left = mid + 1
         }

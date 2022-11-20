@@ -3,6 +3,7 @@ package solution2467__code2
 
 import java.io.StreamTokenizer
 import kotlin.math.abs
+import kotlin.math.absoluteValue
 
 /*
  * TwoPointer 를 이용한 풀이
