@@ -18,7 +18,7 @@ private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run{
     var right = 0
     var min = Int.MAX_VALUE
 
-    while(left < n && right < n){
+    while(right < n){
         val value = arr[right] - arr[left]
         if(value < m){
             right++
