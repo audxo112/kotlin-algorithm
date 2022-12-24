@@ -1,49 +1,52 @@
 // https://www.acmicpc.net/problem/1644
 package solution1644__code1
 
-private fun prime(n: Int): List<Int> {
-    val visited = BooleanArray(n + 1) { true }
-    for (i in 2..n / 2) {
-        var j = i * 2
-        if (!visited[i]) {
-            continue
-        }
-        while (j <= n) {
-            visited[j] = false
-            j += i
-        }
-    }
+import kotlin.math.sqrt
 
-    val list = ArrayList<Int>(n)
-    for (i in 2..n) {
-        if (visited[i]) {
-            list.add(i)
-        }
-    }
-    return list
-}
-
-private fun solution(m: Int): Int {
-    if(m == 1){
+private fun solution(n: Int): Int {
+    if(n == 1){
         return 0
     }
 
-    val arr = prime(m)
+    // 에라토스테네스의 체를 이용하여 소수 판별
+    val visited = BooleanArray(n + 1)
+    visited[1] = true
+    for (i in 2..sqrt(n.toDouble()).toInt()) {
+        if (visited[i]) {
+            continue
+        }
+        for (j in i * i .. n step i) {
+            visited[j] = true
+        }
+    }
 
-    val n = arr.size
+    // 누산 값 리스트를 만듬
+    val arr = IntArray(n / 2 + 2)
+    var index = 1
+    for (i in 1 .. n){
+        if(visited[i]){
+            continue
+        }
+        arr[index] = arr[index - 1] + i
+        index ++
+    }
+
     var left = 0
     var right = 0
-    var sum = 0
     var count = 0
 
-    while (left < n) {
-        if(right < n && sum < m){
-            sum += arr[right++]
-        } else{
-            if(sum == m){
-                count ++
+    while (left < index) {
+        val sum = arr[right] - arr[left]
+        if(sum < n){
+            right += 1
+            if(right >= index){
+                return count
             }
-            sum -= arr[left++]
+        } else if (sum > n){
+            left += 1
+        } else {
+            count += 1
+            left += 1
         }
     }
 

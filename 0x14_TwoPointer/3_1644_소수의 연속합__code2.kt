@@ -1,17 +1,18 @@
 // https://www.acmicpc.net/problem/1644
 package solution1644__code2
 
+import kotlin.math.sqrt
 
-private fun solution(n: Int): Int{
-    val visited = BooleanArray(n + 1) { true }
-    for (i in 2..n / 2) {
-        if (!visited[i]) {
+private fun solution(n: Int): Int {
+    // 에라토스테네스의 체를 이용하여 소수 판별
+    val visited = BooleanArray(n + 1)
+    visited[1] = true
+    for (i in 2..sqrt(n.toDouble()).toInt()) {
+        if (visited[i]) {
             continue
         }
-        var j = 2
-        while (i * j <= n) {
-            visited[i * j] = false
-            j++
+        for (j in i * i .. n step i) {
+            visited[j] = true
         }
     }
 
@@ -25,21 +26,23 @@ private fun solution(n: Int): Int{
             if (sum == n) {
                 count += 1
             }
+            // 소수를 찾을때까지 right 를 증가
             do {
                 right += 1
-                if(right > n){
+                if (right > n) {
                     return count
                 }
-            }while (!visited[right])
+            } while (visited[right])
             sum += right
         } else {
             sum -= left
+            // 소수를 찾을때까지 left 를 증가
             do {
                 left += 1
-                if(left > right){
+                if (left > right) {
                     return count
                 }
-            } while(!visited[left])
+            } while (visited[left])
         }
     }
     return count
