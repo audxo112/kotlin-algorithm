@@ -39,9 +39,6 @@ private fun solution(n: Int): Int {
             // 소수를 찾을때까지 left 를 증가
             do {
                 left += 1
-                if (left > right) {
-                    return count
-                }
             } while (visited[left])
         }
     }
