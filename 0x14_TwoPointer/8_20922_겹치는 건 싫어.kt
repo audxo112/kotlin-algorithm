@@ -20,6 +20,7 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     var max = 0
 
     while(right < n){
+        // right 에 존재하는 값이 k 개를 넘는다면 left 를 줄인다
         while(num[arr[right]] + 1 > k){
             num[arr[left]] -= 1
             left += 1

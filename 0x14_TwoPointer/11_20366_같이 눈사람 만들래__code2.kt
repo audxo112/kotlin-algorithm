@@ -15,6 +15,8 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
 
     var min = Int.MAX_VALUE
 
+    // 모든 경우의 수를 하면 중복되는 경우가 존재한다
+    // 그러므로 엘자가 선택한 눈덩이 내부만 안나가 선택하게 변경한다
     for(eljaLeft in 0 until n - 3){
         for(eljaRight in eljaLeft + 3 until n){
             val eljaHeight = arr[eljaLeft] + arr[eljaRight]

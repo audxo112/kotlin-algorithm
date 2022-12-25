@@ -3,6 +3,7 @@ package solution2283
 
 import java.io.StreamTokenizer
 
+// 왜 left 와 right 를 0 부터 시작해야 36% 에서 통과하는지 이해는 하지 못했다
 fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     fun input(): Int{
         nextToken()
@@ -19,9 +20,11 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
         val a = input()
         val b = input()
 
+        // 누산을 진행할 최소값
         if(min > a){
             min = a
         }
+        // 누산을 진행할 최대값
         if(max < b){
             max = b
         }
@@ -29,6 +32,7 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
         arr[b + 1] -= 1
     }
 
+    // 각각 구간에 몇개의 선이 존재하는지 계산
     for(i in min + 1 .. max){
         arr[i] += arr[i - 1]
     }
