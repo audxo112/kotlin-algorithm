@@ -12,6 +12,7 @@ fun main() = System.`in`.bufferedReader().run {
     val nVisited = List(n) { BooleanArray(n) }
     val sVisited = List(n) { BooleanArray(n) }
 
+    // 방문 여부의 확장 함수로 DFS 구현
     fun List<BooleanArray>.dfs(x: Int, y: Int, flag: Boolean){
         val color = graph[y][x]
         this[y][x] = true

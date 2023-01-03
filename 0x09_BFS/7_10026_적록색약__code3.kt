@@ -6,6 +6,7 @@ fun main() = System.`in`.bufferedReader().run {
     val dx = intArrayOf(1, 0, -1, 0)
     val dy = intArrayOf(0, -1, 0, 1)
 
+    // 색약의 경우 배열을 만들때 애초에 R,G 를 R로 치환해서 시작
     val sGraph = Array(n){ CharArray(n) }
     val nGraph = Array(n){y ->
         readLine().toCharArray().also{ arr ->
@@ -15,6 +16,7 @@ fun main() = System.`in`.bufferedReader().run {
         }
     }
 
+    // 배열을 기준으로 dfs
     fun Array<CharArray>.dfs(x: Int, y: Int){
         val color = this[y][x]
         this[y][x] = ' '
