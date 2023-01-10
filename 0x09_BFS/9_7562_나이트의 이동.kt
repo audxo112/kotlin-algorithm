@@ -5,12 +5,12 @@ import java.io.StreamTokenizer
 import java.util.LinkedList
 import java.util.Queue
 
-val dx = intArrayOf(1, 2, 2, 1, -1, -2, -2, -1)
-val dy = intArrayOf(2, 1, -1, -2, -2, -1, 1, 2)
+private val dx = intArrayOf(1, 2, 2, 1, -1, -2, -2, -1)
+private val dy = intArrayOf(2, 1, -1, -2, -2, -1, 1, 2)
 
-class Point(val x: Int, val y: Int)
+private class Point(val x: Int, val y: Int)
 
-fun bfs(l: Int, sx: Int, sy: Int, ex: Int, ey: Int): Int{
+private fun bfs(l: Int, sx: Int, sy: Int, ex: Int, ey: Int): Int{
     // 불필요한 이동범위를 줄이기 위해 범위 지정
     val SX = (ex - 7).coerceAtLeast(0)
     val EX = (ex + 7).coerceAtMost(l)
@@ -42,7 +42,7 @@ fun bfs(l: Int, sx: Int, sy: Int, ex: Int, ey: Int): Int{
     return 0
 }
 
-fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
+private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
 
     fun input(): Int{
         nextToken()

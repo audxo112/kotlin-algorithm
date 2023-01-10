@@ -4,9 +4,9 @@ package solution10026__code1
 import java.util.LinkedList
 import java.util.Queue
 
-class Node(val x: Int, val y: Int)
+private class Node(val x: Int, val y: Int)
 
-fun main() = System.`in`.bufferedReader().run {
+private fun main() = System.`in`.bufferedReader().run {
     val n = readLine().toInt()
     val graph = List(n) {
         readLine().toCharArray()

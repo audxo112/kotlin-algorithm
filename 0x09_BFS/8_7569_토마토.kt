@@ -5,13 +5,13 @@ import java.io.StreamTokenizer
 import java.util.LinkedList
 import java.util.Queue
 
-class Point(val x: Int, val y: Int, val z: Int)
+private class Point(val x: Int, val y: Int, val z: Int)
 
-val dx = intArrayOf(1, 0, -1, 0, 0, 0)
-val dy = intArrayOf(0, -1, 0, 1, 0, 0)
-val dz = intArrayOf(0, 0, 0, 0, 1, -1)
+private val dx = intArrayOf(1, 0, -1, 0, 0, 0)
+private val dy = intArrayOf(0, -1, 0, 1, 0, 0)
+private val dz = intArrayOf(0, 0, 0, 0, 1, -1)
 
-fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
+private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     fun input(): Int {
         nextToken()
         return nval.toInt()
