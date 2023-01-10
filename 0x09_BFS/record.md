@@ -31,5 +31,20 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 ### 8 7569 토마토
 ![image](https://user-images.githubusercontent.com/9216335/210891572-f0260e19-3832-4d89-8fd5-6d25117c6d05.png)
 
-### 9_7562 나이트의 이동
+### 9 7562 나이트의 이동
 ![image](https://user-images.githubusercontent.com/9216335/210892079-40292ed8-bc0b-4590-a6d0-5e5c7f24a18d.png)
+
+### 10 5427 불
+![image](https://user-images.githubusercontent.com/9216335/211567356-bf501b65-7ad8-41f4-8c71-3f363054acb1.png)
+
+### 11 2583 영역 구하기 (bfs)
+![image](https://user-images.githubusercontent.com/9216335/211567497-aeb03a8b-d763-4215-b6ff-d1f66f0012cb.png)
+
+### 11 2583 영역 구하기 (dfs)
+![image](https://user-images.githubusercontent.com/9216335/211567567-9183b2a8-1c45-4ff7-a1eb-6f250a0507e9.png)
+
+### 12 2667 단지번호붙이기 code2 (bfs)
+![image](https://user-images.githubusercontent.com/9216335/211567696-f1456b33-d4a9-461d-9900-0defee8886f6.png)
+
+### 12 2667 단지번호붙이기 code2 (dfs)
+![image](https://user-images.githubusercontent.com/9216335/211567787-e7694b9f-8b95-40c6-9414-a5f2e1646b9d.png)
