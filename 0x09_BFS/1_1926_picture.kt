@@ -5,10 +5,10 @@ import java.io.InputStreamReader
 import java.util.LinkedList
 import java.util.StringTokenizer
 
-lateinit var dx: Array<Int>
-lateinit var dy: Array<Int>
-lateinit var board: Array<Array<Int>>
-lateinit var visited: Array<Array<Boolean>>
+private lateinit var dx: Array<Int>
+private lateinit var dy: Array<Int>
+private lateinit var board: Array<Array<Int>>
+private lateinit var visited: Array<Array<Boolean>>
 var max = 0
 
 fun main() {
