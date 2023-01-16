@@ -67,9 +67,6 @@ private fun bfs(x: Int, y: Int): Int {
             if (nx < 0 || nx > visited[0].lastIndex) continue
             if (ny < 0 || ny > visited.lastIndex) continue
 
-            if(x==3 && y == 0) {
-                println()
-            }
             if (visited[ny][nx].not()) {
                 size += 1
                 visited[ny][nx] = true
