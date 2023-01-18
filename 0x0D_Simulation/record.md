@@ -3,3 +3,9 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 -->
 ### 1 15683 감시
 ![image](https://user-images.githubusercontent.com/9216335/212612913-cee2ffc4-e843-47a9-b920-1db10ef34811.png)
+
+### 2 18808 스티커 붙이기__code1
+![image](https://user-images.githubusercontent.com/9216335/213045656-33d6064e-2051-4b27-8e80-23d58c4abe18.png)
+
+### 2 18808 스티커 붙이기__code2
+![image](https://user-images.githubusercontent.com/9216335/213045405-7abf0735-4f66-4faa-b292-fd3cf88e6fcb.png)
