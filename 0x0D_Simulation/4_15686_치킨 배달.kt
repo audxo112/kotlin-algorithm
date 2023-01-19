@@ -37,18 +37,28 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     }
 
     val chickenCombinations = arrayListOf<ArrayList<Node>>()
-    getCombination(chickenArr,m,0, arrayListOf(),chickenCombinations)
+    getCombination(chickenArr, m, 0, arrayListOf(), chickenCombinations)
 
-    var answer = Int.MAX_VALUE
-    for(chickenComb in chickenCombinations) {
-        var totalDist = 0
-        for(house in houseArr) {
-            totalDist += bfs(house, chickenComb)
-        }
-
-        if(answer > totalDist) answer = totalDist
+    val distHashList = Array(houseArr.size) {
+        bfs(houseArr[it])
     }
+    var answer = Int.MAX_VALUE
+
+    for (chickenComb in chickenCombinations) { //치킨집 선정
+        var totalDist = 0
+        for (distHash in distHashList) { //각각의 집들에서
+            var minDist = Int.MAX_VALUE
+            for (chicken in chickenComb) { // 각 치킨집과의 거리중 작은 것
+                minDist = minOf(minDist, distHash[chicken]!!)
+            }
+            totalDist += minDist
+        }
+        answer = minOf(totalDist, answer)
+
+    }
+
     println(answer)
+
 }
 
 private fun getCombination(
@@ -69,11 +79,13 @@ private fun getCombination(
     }
 }
 
-private fun bfs(start: Node, chickenComb: ArrayList<Node>) : Int{
+private fun bfs(start: Node): HashMap<Node, Int> {
 
     val dist = Array(map.size) {
         IntArray(map.size)
     }
+
+    val distHashMap = HashMap<Node, Int>()
 
     val queue: Queue<Node> = LinkedList()
     queue.add(start)
@@ -92,12 +104,12 @@ private fun bfs(start: Node, chickenComb: ArrayList<Node>) : Int{
 
             if (dist[nx][ny] == 0) {
                 dist[nx][ny] = dist[x][y] + 1
-                if (map[nx][ny] == 2 && chickenComb.contains(Node(nx,ny))) {
-                    return dist[nx][ny]
+                if (map[nx][ny] == 2) {
+                    distHashMap[Node(nx, ny)] = dist[nx][ny]
                 }
                 queue.add(Node(nx, ny))
             }
         }
     }
-    return 0
+    return distHashMap
 }
