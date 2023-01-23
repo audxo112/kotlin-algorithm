@@ -16,4 +16,8 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 ### 3 12100 2048 Easy__code2
 ![image](https://user-images.githubusercontent.com/9216335/213987910-4eb8c560-9e3d-4135-bac8-ede37ac32de7.png)
 
-### 4
+### 4 15686 치킨 배달__code1
+![image](https://user-images.githubusercontent.com/9216335/214079392-d3cb9a01-45df-4811-aadd-50acab3afb86.png)
+
+### 4 15686 치킨 배달__code2
+![image](https://user-images.githubusercontent.com/9216335/214079657-3057e806-24f3-48bc-8fd8-33d595da42c5.png)
