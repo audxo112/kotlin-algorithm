@@ -9,3 +9,11 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 
 ### 2 18808 스티커 붙이기__code2
 ![image](https://user-images.githubusercontent.com/9216335/213045405-7abf0735-4f66-4faa-b292-fd3cf88e6fcb.png)
+
+### 3 12100 2048 Easy__code1
+![image](https://user-images.githubusercontent.com/9216335/213987995-a366b33a-5951-45ec-8e06-de6905ec1d05.png)
+
+### 3 12100 2048 Easy__code2
+![image](https://user-images.githubusercontent.com/9216335/213987910-4eb8c560-9e3d-4135-bac8-ede37ac32de7.png)
+
+### 4
