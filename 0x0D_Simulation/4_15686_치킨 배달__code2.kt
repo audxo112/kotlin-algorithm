@@ -37,8 +37,10 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     }
 
     var minDist = Int.MAX_VALUE
-    // 스택으로 추가 삭제를 선택
-    val selected = Stack<Int>()
+    // 기존에는 Stack 을 이용해서 push, pop 을 진행했으나
+    // 주영님 코드를 참고하여 배열로 변경
+    // 212ms -> 132ms
+    val selected = IntArray(M)
 
     // 마지막에 계산을 진행
     fun calculateDist(): Int{
@@ -62,9 +64,8 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
             return
         }
 
-        selected.add(c)
+        selected[m] = c
         dfs(c + 1, m + 1)
-        selected.pop()
         dfs(c + 1, m)
     }
 
