@@ -21,3 +21,12 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 
 ### 4 15686 치킨 배달__code2
 ![image](https://user-images.githubusercontent.com/9216335/214081776-fd362a85-da46-4281-ac97-740a8747f424.png)
+
+### 5 11559 Puyo Puyo__code1
+![image](https://user-images.githubusercontent.com/9216335/214507751-387a144a-b2f3-4395-9da3-40088c0f7af7.png)
+
+### 5 11559 Puyo Puyo__code2
+![image](https://user-images.githubusercontent.com/9216335/214507631-111b73b3-90d0-4db8-ac74-03a6a6697dcc.png)
+
+### 5 11559 Puyo Puyo__code3
+![image](https://user-images.githubusercontent.com/9216335/214507474-4543f399-870e-45ea-b084-a5eceaa843a5.png)
