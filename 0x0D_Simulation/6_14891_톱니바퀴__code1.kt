@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/14891
-package solution14891
+package solution14891__code1
 
 import java.io.BufferedReader
 import java.io.InputStreamReader

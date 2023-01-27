@@ -31,5 +31,9 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 ### 5 11559 Puyo Puyo__code3
 ![image](https://user-images.githubusercontent.com/9216335/214507474-4543f399-870e-45ea-b084-a5eceaa843a5.png)
 
-### 6 14891 톱니바퀴
+### 6 14891 톱니바퀴__code1
 ![image](https://user-images.githubusercontent.com/9216335/215017537-d5f441f2-6f65-407c-b5fc-afe84cb6cab2.png)
+
+### 6 14891 톱니바퀴__code2
+![image](https://user-images.githubusercontent.com/9216335/215038833-af4f3eba-dabc-4831-9fc2-f905f526f086.png)
+
