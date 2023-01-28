@@ -37,3 +37,5 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 ### 6 14891 톱니바퀴__code2
 ![image](https://user-images.githubusercontent.com/9216335/215038833-af4f3eba-dabc-4831-9fc2-f905f526f086.png)
 
+### 7 14499 주사위 굴리기
+![image](https://user-images.githubusercontent.com/9216335/215252018-da45b423-7af7-433c-990f-67840ffe321e.png)
