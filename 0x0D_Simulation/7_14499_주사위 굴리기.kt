@@ -59,7 +59,7 @@ private class Dice {
 }
 
 fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
-    fun input(): Int{
+    fun input(): Int {
         nextToken()
         return nval.toInt()
     }
@@ -72,34 +72,37 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     val k = input()
 
     val dice = Dice()
-    val map = Array(n){ IntArray(m){ input() } }
+    val map = Array(n) { IntArray(m) { input() } }
 
     val dirs = Array(k) { input() }
 
     val sb = StringBuilder()
 
-    fun play(){
+    fun play() {
         map[x][y] = dice.play(map[x][y])
         sb.appendLine(dice.top)
     }
 
-    for(dir in dirs){
-        when{
+    for (dir in dirs) {
+        when {
             dir == E && y + 1 < m -> {
                 y += 1
                 dice.eastRoll()
                 play()
             }
+
             dir == W && y - 1 >= 0 -> {
                 y -= 1
                 dice.westRoll()
                 play()
             }
+
             dir == N && x - 1 >= 0 -> {
                 x -= 1
                 dice.northRoll()
                 play()
             }
+
             dir == S && x + 1 < n -> {
                 x += 1
                 dice.southRoll()

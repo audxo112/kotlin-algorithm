@@ -59,9 +59,9 @@ private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     }
 
     // 스티커 크기를 고려해서 순회
-    fun Array<IntArray>.install(sticker: Sticker): Boolean{
-        for(y in 0 .. N - sticker.h) for(x in 0 .. M - sticker.w){
-            if(attach(sticker, x, y)){
+    fun Array<IntArray>.install(sticker: Sticker): Boolean {
+        for (y in 0..N - sticker.h) for (x in 0..M - sticker.w) {
+            if (attach(sticker, x, y)) {
                 return true
             }
         }
@@ -87,10 +87,10 @@ private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     }
 
     var count = 0
-    for(list in stickers){
+    for (list in stickers) {
         var sticker = list
-        for(i in 0 until 4){
-            if(map.install(sticker)){
+        for (i in 0 until 4) {
+            if (map.install(sticker)) {
                 count += sticker.points.size
                 break
             }

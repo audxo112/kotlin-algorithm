@@ -3,7 +3,7 @@ package solution15683
 
 import java.io.StreamTokenizer
 
-class Camera(val type:Int, val x: Int, val y: Int)
+class Camera(val type: Int, val x: Int, val y: Int)
 
 fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     // 감시할 방향을 정의
@@ -42,11 +42,11 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
         for (i in dirs) {
             var nx = x
             var ny = y
-            while(true) {
+            while (true) {
                 nx += dx[i]
                 ny += dy[i]
 
-                if(nx !in 0 until m || ny !in 0 until n || this[ny][nx] == -1){
+                if (nx !in 0 until m || ny !in 0 until n || this[ny][nx] == -1) {
                     break
                 }
                 if (this[ny][nx] == 0) {
@@ -63,10 +63,10 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
         for (i in dirs) {
             var nx = x
             var ny = y
-            while(true){
+            while (true) {
                 nx += dx[i]
                 ny += dy[i]
-                if(nx !in 0 until m || ny !in 0 until n || this[ny][nx] == -1){
+                if (nx !in 0 until m || ny !in 0 until n || this[ny][nx] == -1) {
                     break
                 }
                 this[ny][nx] -= 1
@@ -92,6 +92,7 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
                     camera5s.add(Camera(value, x, y))
                     visited[y][x] += 1
                 }
+
                 6 -> visited[y][x] = -1
                 0 -> zero += 1
                 else -> {
@@ -103,13 +104,13 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     }
 
     // 5번 카메라를 전부 설치한다
-    for(camera in camera5s){
+    for (camera in camera5s) {
         zero -= visited.install(camera.x, camera.y, cameraDirs[5][0])
     }
 
     // 백트래킹을 이용하여 모든 경우의 수를 파악
     fun ArrayList<Camera>.backTracking(n: Int, minZero: Int) {
-        if(this.size == n){
+        if (this.size == n) {
             // 끝까지 도달 했을 경우에 최소값을 구해야 비교수가 줄어듬
             zero = minZero.coerceAtMost(zero)
             return
@@ -118,7 +119,7 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
         val camera = this[n]
         val dirs = cameraDirs[camera.type]
 
-        for(i in dirs.indices){
+        for (i in dirs.indices) {
             val newZero = visited.install(camera.x, camera.y, dirs[i])
 
             backTracking(n + 1, minZero - newZero)

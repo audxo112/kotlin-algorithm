@@ -13,7 +13,7 @@ private class Gear(
     val info: String,
     private var leftIndex: Int = 6,
     private var rightIndex: Int = 2
-){
+) {
     val left
         get() = info[leftIndex]
 
@@ -24,12 +24,11 @@ private class Gear(
     val top
         get() = info[(leftIndex + 2) % info.length]
 
-    fun rotate(dir: Int){
-        if(dir == CR){
+    fun rotate(dir: Int) {
+        if (dir == CR) {
             leftIndex = (leftIndex + info.length - 1) % info.length
             rightIndex = (rightIndex + info.length - 1) % info.length
-        }
-        else if(dir == RCR){
+        } else if (dir == RCR) {
             leftIndex = (leftIndex + 1) % info.length
             rightIndex = (rightIndex + 1) % info.length
         }
@@ -39,20 +38,20 @@ private class Gear(
 fun main() {
     val br = BufferedReader(InputStreamReader(System.`in`))
 
-    val gears = Array(4){
+    val gears = Array(4) {
         Gear(br.readLine())
     }
 
     // start, end 를 만들어서 역류하기 않게
-    fun rotate(index: Int, dir: Int, start: Int, end: Int){
-        if(index > start){
+    fun rotate(index: Int, dir: Int, start: Int, end: Int) {
+        if (index > start) {
             // 객체를 이용 하기 때문에 좌, 우 비교가 간편
-            if(gears[index - 1].right != gears[index].left){
+            if (gears[index - 1].right != gears[index].left) {
                 rotate(index - 1, -dir, start, index - 1)
             }
         }
-        if(index < end){
-            if(gears[index + 1].left != gears[index].right){
+        if (index < end) {
+            if (gears[index + 1].left != gears[index].right) {
                 rotate(index + 1, -dir, index + 1, end)
             }
         }
@@ -60,7 +59,7 @@ fun main() {
         gears[index].rotate(dir)
     }
 
-    repeat(br.readLine().toInt()){
+    repeat(br.readLine().toInt()) {
         val tokenizer = StringTokenizer(br.readLine(), " ")
         val num = tokenizer.nextToken().toInt()
         val dir = tokenizer.nextToken().toInt()
@@ -68,8 +67,8 @@ fun main() {
     }
 
     var total = 0
-    for(i in 0 until 4){
-        if(gears[i].top == '1'){
+    for (i in 0 until 4) {
+        if (gears[i].top == '1') {
             total += 1 shl i
         }
     }

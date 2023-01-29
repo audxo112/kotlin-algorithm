@@ -10,7 +10,7 @@ private class Truck(
 )
 
 fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
-    fun input(): Int{
+    fun input(): Int {
         nextToken()
         return nval.toInt()
     }
@@ -18,7 +18,7 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     val n = input()
     val w = input()
     val L = input()
-    val trucks = Array(n){ Truck(input()) }
+    val trucks = Array(n) { Truck(input()) }
 
     var time = 1
     var totalWeight = 0
@@ -28,19 +28,20 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     // 다리를 건너고 있는 트럭 Index
     var runningIndex = 0
 
-    while(completeIndex < trucks.size){
+    while (completeIndex < trucks.size) {
         // 트럭이 다리에 올라가 있는지 여부
-        if(runningIndex < trucks.size &&
+        if (runningIndex < trucks.size &&
             runningIndex - completeIndex < w &&
-            totalWeight + trucks[runningIndex].weight <= L){
+            totalWeight + trucks[runningIndex].weight <= L
+        ) {
             totalWeight += trucks[runningIndex].weight
             trucks[runningIndex].time = time
             runningIndex += 1
             time += 1
-        } else{
+        } else {
             // 다리 + 트럭이 올라간 시간이 해당 트럭이 전부 건넜을때 시간이다
             // 만약 트럭을 적재하면서 이미 지나갔다면 시간은 조절하지 않는다
-            if(time - trucks[completeIndex].time < w){
+            if (time - trucks[completeIndex].time < w) {
                 time = w + trucks[completeIndex].time
             }
             totalWeight -= trucks[completeIndex].weight

@@ -73,8 +73,8 @@ fun main() {
 
     fun sweep() {
         for (x in 0 until W) {
-            for(y in map[x].indices.reversed()){
-                when(map[x][y]){
+            for (y in map[x].indices.reversed()) {
+                when (map[x][y]) {
                     '*' -> map[x].removeAt(y)
                 }
             }

@@ -43,7 +43,7 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
             return
         }
         // c == C 가 같거나 전부 선택해도 M 개가 되지 않는 경우 종료
-        else if(c == C || C - c < M - m){
+        else if (c == C || C - c < M - m) {
             return
         }
 
