@@ -39,3 +39,6 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 
 ### 7 14499 주사위 굴리기
 ![image](https://user-images.githubusercontent.com/9216335/215252018-da45b423-7af7-433c-990f-67840ffe321e.png)
+
+### 8 13335 트럭
+![image](https://user-images.githubusercontent.com/9216335/215312473-d3f61a89-ee05-4474-98cb-169ee902079e.png)
