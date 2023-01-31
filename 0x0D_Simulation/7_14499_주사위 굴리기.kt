@@ -9,6 +9,14 @@ const val RIGHT = 3
 const val FRONT = 4
 const val BACK = 5
 
+private val changePlanes = arrayOf(
+    intArrayOf(),
+    intArrayOf(TOP, LEFT, BOTTOM, RIGHT),//동쪽으로 구르기, 전 후 제외 시계방향
+    intArrayOf(TOP, RIGHT, BOTTOM, LEFT),//서쪽으로 구르기, 전 후 제외 반시계방향
+    intArrayOf(TOP, FRONT, BOTTOM, BACK),//북쪽으로 구르기, 좌 우 제외 시계방향
+    intArrayOf(TOP, BACK, BOTTOM, FRONT),//남쪽으로 구르기, 좌 우 제외 반시계방향
+)
+
 private class Position(var y: Int, var x: Int) {
     fun move(dir: Int): Boolean {
         var nx = x
@@ -65,24 +73,9 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
 }
 
 fun IntArray.roll(dir: Int) {
-    lateinit var changePlanes: Array<Int>
-    when (dir) {
-        1 -> { //동쪽으로 구르기, 전 후 제외 시계방향
-            changePlanes = arrayOf(TOP, LEFT, BOTTOM, RIGHT)
-        }
-        2 -> { //서쪽으로 구르기, 전 후 제외 반시계방향
-            changePlanes = arrayOf(TOP, RIGHT, BOTTOM, LEFT)
-        }
-        3 -> { //북쪽으로 구르기, 좌 우 제외 시계방향
-            changePlanes = arrayOf(TOP, FRONT, BOTTOM, BACK)
-        }
-        4 -> { //남쪽으로 구르기, 좌 우 제외 반시계방향
-            changePlanes = arrayOf(TOP, BACK, BOTTOM, FRONT)
-        }
+    val temp = this[changePlanes[dir][0]]
+    for (i in 0 until changePlanes[dir].lastIndex) {
+        this[changePlanes[dir][i]] = this[changePlanes[dir][i + 1]]
     }
-    val temp = this[changePlanes[0]]
-    for (i in 0 until changePlanes.lastIndex) {
-        this[changePlanes[i]] = this[changePlanes[i + 1]]
-    }
-    this[changePlanes.last()] = temp
+    this[changePlanes[dir].last()] = temp
 }
