@@ -21,3 +21,24 @@ https://github.com/audxo112/kotlin-algorithm/issues/11
 
 ### 4 15686 치킨 배달__code2
 ![image](https://user-images.githubusercontent.com/9216335/214081776-fd362a85-da46-4281-ac97-740a8747f424.png)
+
+### 5 11559 Puyo Puyo__code1
+![image](https://user-images.githubusercontent.com/9216335/214507751-387a144a-b2f3-4395-9da3-40088c0f7af7.png)
+
+### 5 11559 Puyo Puyo__code2
+![image](https://user-images.githubusercontent.com/9216335/214507631-111b73b3-90d0-4db8-ac74-03a6a6697dcc.png)
+
+### 5 11559 Puyo Puyo__code3
+![image](https://user-images.githubusercontent.com/9216335/214507474-4543f399-870e-45ea-b084-a5eceaa843a5.png)
+
+### 6 14891 톱니바퀴__code1
+![image](https://user-images.githubusercontent.com/9216335/215017537-d5f441f2-6f65-407c-b5fc-afe84cb6cab2.png)
+
+### 6 14891 톱니바퀴__code2
+![image](https://user-images.githubusercontent.com/9216335/215038833-af4f3eba-dabc-4831-9fc2-f905f526f086.png)
+
+### 7 14499 주사위 굴리기
+![image](https://user-images.githubusercontent.com/9216335/215252018-da45b423-7af7-433c-990f-67840ffe321e.png)
+
+### 8 13335 트럭
+![image](https://user-images.githubusercontent.com/9216335/215312473-d3f61a89-ee05-4474-98cb-169ee902079e.png)

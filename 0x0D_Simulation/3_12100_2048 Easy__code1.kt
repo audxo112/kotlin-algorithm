@@ -140,7 +140,7 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     fun Array<IntArray>.coerceAtLeast(least: Int): Int {
         var result = least
         for (line in this) for (value in line) {
-            if(result < value){
+            if (result < value) {
                 result = value
             }
         }

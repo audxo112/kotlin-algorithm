@@ -43,11 +43,11 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     val selected = IntArray(M)
 
     // 마지막에 계산을 진행
-    fun calculateDist(): Int{
+    fun calculateDist(): Int {
         var totalDist = 0
-        for(h in house.indices){
+        for (h in house.indices) {
             var min = Int.MAX_VALUE
-            for(s in selected){
+            for (s in selected) {
                 min = dist[s][h].coerceAtMost(min)
             }
             totalDist += min
@@ -59,8 +59,7 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
         if (m == M) {
             minDist = calculateDist().coerceAtMost(minDist)
             return
-        }
-        else if(c == C || C - c < M - m){
+        } else if (c == C || C - c < M - m) {
             return
         }
 
