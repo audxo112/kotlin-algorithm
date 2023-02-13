@@ -81,9 +81,10 @@ private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     }
 
     val zOrder = IntArray(5)
+    val rotation = IntArray(5)
 
     var count = 125
-    val rotation = IntArray(5)
+
     fun bfs(): Int {
         val visited = Array(5) {
             Array(5) {
@@ -102,8 +103,11 @@ private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
                 val ny = cur.y + dy[i]
                 val nz = cur.z + dz[i]
 
-                if (nx !in 0 until 5 || ny !in 0 until 5 || nz !in 0 until 5 ||
-                        maze[zOrder[nz]][rotation[zOrder[nz]]][ny][nx] == 0 || visited[nz][ny][nx]) {
+                if (nx !in 0 until 5 || ny !in 0 until 5 || nz !in 0 until 5) {
+                    continue
+                }
+
+                if (maze[zOrder[nz]][rotation[zOrder[nz]]][ny][nx] == 0 || visited[nz][ny][nx]) {
                     continue
                 }
 
