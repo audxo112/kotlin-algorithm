@@ -17,6 +17,7 @@ fun main() {
     val map = Array(H) {
         br.readLine().toCharArray()
     }
+    // 배열을 매번 생성이 아닌 combo를 이용하여 방문여부
     val visited = Array(H) { IntArray(W) }
 
     var combo = 0
