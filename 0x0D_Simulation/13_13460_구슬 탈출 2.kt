@@ -5,7 +5,7 @@ import java.util.StringTokenizer
 import java.util.Queue
 import java.util.LinkedList
 
-private data class Node(val rx: Int, val ry: Int, val bx: Int, val by: Int, val result: Int) {
+private class Node(val rx: Int, val ry: Int, val bx: Int, val by: Int, val result: Int) {
     val key = (rx shl 12) + (ry shl 8) + (bx shl 4) + by
 }
 
