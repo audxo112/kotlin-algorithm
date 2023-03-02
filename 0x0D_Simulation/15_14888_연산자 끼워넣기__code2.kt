@@ -10,44 +10,34 @@ private fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
     }
 
     val n = input()
+    val nn = n - 1
     val num = Array(n){ input() }
-
-    // visited 를 사용하는게 오히려더 손해
-    // 각각 개수를 이용해서 0이 될때까지 사용하는 방식으로 변경
-    val op = IntArray(4){
-        input()
-    }
 
     var minVal = Int.MAX_VALUE
     var maxVal = Int.MIN_VALUE
 
-    fun operate(num1: Int, num2: Int, operator: Int): Int{
-        return when(operator){
-            0 -> num1 + num2
-            1 -> num1 - num2
-            2 -> num1 * num2
-            else -> num1 / num2
-        }
-    }
-
-    fun backTracking(N: Int, value: Int){
-        if(N == n - 1){
+    fun backTracking(N: Int, value: Int, add: Int, sub: Int, mul: Int, div: Int){
+        if(N == nn){
             minVal = value.coerceAtMost(minVal)
             maxVal = value.coerceAtLeast(maxVal)
-
             return
         }
-        repeat(4){ i ->
-            if(op[i] <= 0){
-                return@repeat
-            }
-            op[i] -= 1
-            backTracking(N + 1, operate(value, num[N + 1], i))
-            op[i] += 1
+        if(add > 0){
+            backTracking(N + 1, value + num[N + 1], add - 1, sub, mul, div)
+        }
+        if(sub > 0){
+            backTracking(N + 1, value - num[N + 1], add, sub - 1, mul, div)
+        }
+        if(mul > 0){
+            backTracking(N + 1, value * num[N + 1], add, sub, mul - 1, div)
+        }
+        if(div > 0){
+            backTracking(N + 1, value / num[N + 1], add, sub, mul, div - 1)
         }
     }
 
-    backTracking(0, num[0])
+    backTracking(0, num[0], input(), input(), input(), input())
+
     println(maxVal)
     println(minVal)
 }
