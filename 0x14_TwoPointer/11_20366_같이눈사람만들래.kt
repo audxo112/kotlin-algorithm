@@ -2,8 +2,8 @@ package `kotlin-algorithm`.`0x14_TwoPointer`
 
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import java.lang.Math.abs
 import java.util.StringTokenizer
+import kotlin.math.abs
 
 fun main() {
     val br = BufferedReader(InputStreamReader(System.`in`))
